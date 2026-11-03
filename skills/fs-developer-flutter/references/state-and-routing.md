@@ -6,7 +6,7 @@
 - Repositories are providers, so tests override them (`ProviderScope(overrides: [...])`).
 - `ref.watch` in build, `ref.read` in callbacks, `ref.listen` for side effects (snackbars, navigation).
 - After `await` in a notifier, check `ref.mounted` before touching state.
-- Do not build sync or offline persistence on Riverpod's experimental features; use the data layer (`fs-api-developer`).
+- Do not build sync or offline persistence on Riverpod's experimental features; use the data layer (`fs-developer-api`).
 - Existing Bloc, Provider or other library: keep it and follow its docs; never mix.
 
 ## go_router (default)

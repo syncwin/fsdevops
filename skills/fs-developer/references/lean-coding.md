@@ -7,7 +7,7 @@ Principle credited in `CREDITS.md` (Ponytail's minimal-code order of operations)
 2. **Does the project already have it?** Search the repo (widgets, extensions, providers, helpers) and reuse.
 3. **Does Flutter or Dart already provide it?** Material/Cupertino widgets, `ThemeData` component themes, `LayoutBuilder`, `Intl`, `dart:collection`, `Future`/`Stream` utilities. See `flutter-shortcuts.md`.
 4. **Does an already-approved dependency provide it?** Riverpod, go_router, drift, freezed.
-5. **Is a well-maintained package worth it?** Only with the user's OK (`fs-security-engineer` licence and health check). One package per need.
+5. **Is a well-maintained package worth it?** Only with the user's OK (`fs-developer-security` licence and health check). One package per need.
 6. **Write the smallest code that works**, with tests for its behaviour.
 
 ## Habits
@@ -23,4 +23,4 @@ Principle credited in `CREDITS.md` (Ponytail's minimal-code order of operations)
 - **ultra**: also report lines added versus removed and justify each new file.
 
 ## Shortcut marker
-When you deliberately take a shortcut to ship (a deliberate gap with a reason), mark it `// SHORTCUT(fs): <reason>, remove when <condition>`. `fs-qa-engineer` lists every marker.
+When you deliberately take a shortcut to ship (a deliberate gap with a reason), mark it `// SHORTCUT(fs): <reason>, remove when <condition>`. `fs-developer-qa` lists every marker.

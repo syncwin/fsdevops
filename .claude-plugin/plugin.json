@@ -1,7 +1,7 @@
 {
   "name": "fs-developer",
   "displayName": "Full-Stack Developer",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Full-Stack Developer: plan, build, update, verify, review and release apps across stacks. Flutter first (Windows desktop, then mobile and web); more stacks plug in later.",
   "author": {
     "name": "@wasimness",
@@ -30,7 +30,7 @@
   "termsOfServiceUrl": "https://syncwin.com/terms-and-conditions/",
   "metadata": {
     "displayName": "Full-Stack Developer",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "releaseStage": "beta",
     "author": "@wasimness",
     "company": "SyncWin",

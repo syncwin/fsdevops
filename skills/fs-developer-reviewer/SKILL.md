@@ -1,10 +1,10 @@
 ---
-name: fs-reviewer
-description: Independent review stage of Full-Stack Developer. Reviews finished app code read-only through one lens per pass - security, quality, lean (over-engineering), accessibility or performance - reporting only findings with confidence 80 or higher in a fixed format with severity, location, evidence and fix, and ends with a one-line verdict. Run after the fs-qa-engineer gate is green, preferably through the fs-code-reviewer agent. Use when the user asks directly to review any Flutter code.
+name: fs-developer-reviewer
+description: Independent review stage of Full-Stack Developer. Reviews finished app code read-only through one lens per pass - security, quality, lean (over-engineering), accessibility or performance - reporting only findings with confidence 80 or higher in a fixed format with severity, location, evidence and fix, and ends with a one-line verdict. Run after the fs-developer-qa gate is green, preferably through the fs-developer-code-reviewer agent. Use when the user asks directly to review any Flutter code.
 license: MIT
 metadata:
   displayName: "FS Reviewer"
-  version: "0.1.0"
+  version: "0.2.0"
   author: "@wasimness"
   company: "SyncWin"
 ---
@@ -16,7 +16,7 @@ Read-only. Scope: the folder and the approved brief; never the build transcript.
 ## Lenses (one per pass)
 | Lens | Look for |
 |---|---|
-| security | `fs-security-engineer` rules: secrets in code or config, tokens in plain storage or logs, unvalidated deep links, risky permissions, unsafe dependencies |
+| security | `fs-developer-security` rules: secrets in code or config, tokens in plain storage or logs, unvalidated deep links, risky permissions, unsafe dependencies |
 | quality | bugs, unhandled errors and states, `BuildContext` across async gaps, state leaks, wrong provider scope, missing tests for changed behaviour, broken ownership rules |
 | lean | code the plan didn't need, duplicate utilities, abstractions with one use, a second state or routing library (`fs-developer/references/lean-coding.md`) |
 | a11y | missing semantics, small targets, contrast, keyboard paths on desktop |

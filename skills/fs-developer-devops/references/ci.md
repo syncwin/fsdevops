@@ -34,4 +34,4 @@ jobs:
 
 - Public repos: Actions minutes are free; private repos use the plan's monthly minutes (Windows runners cost more per minute, so run the Windows job on main and PRs only).
 - Never put secrets in the workflow file; use repository secrets and `${{ secrets.NAME }}`.
-- Signing in CI only after the user sets the secrets (`fs-release-manager`).
+- Signing in CI only after the user sets the secrets (`fs-developer-release`).

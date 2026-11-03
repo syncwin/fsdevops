@@ -6,7 +6,7 @@ A Claude plugin that takes an app from idea to release: plan, build, update, tes
 `/fs` (or just ask to build, fix, test, review or release app code) runs:
 
 1. **Architect**: detects the project, asks up to five questions, writes a PRD or change brief, gets one approval.
-2. **Build**: `fs-flutter-developer` for new apps and modules (pub workspace, module registry with runtime on/off, Riverpod 3, go_router, Material 3 tokens), `fs-maintainer` for changes.
+2. **Build**: `fs-developer-flutter` for new apps and modules (pub workspace, module registry with runtime on/off, Riverpod 3, go_router, Material 3 tokens), `fs-developer-maintainer` for changes.
 3. **QA gate**: format, fix, analyze, test, codegen and a release build, reported as PASS / FAIL / NOT RUN.
 4. **Independent review** by a read-only agent, one lens per pass.
 5. **Release**: versions, changelog, Windows / Android / iOS / web packaging.

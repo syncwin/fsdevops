@@ -17,7 +17,7 @@ If `.claude/ownership.md` exists, read it before editing. Format (create it in n
 2. Keep widget trees declarative. Prefer small widget classes over `_buildX()` helper methods, which builders treat as opaque.
 3. Keep builder-owned packages free of state libraries: widgets take plain values and callbacks; state lives in the shell or module packages.
 4. Keep generated code (freezed, drift, riverpod_generator) out of builder-owned packages.
-5. After a builder save, run the gate (`fs-qa-engineer`): builders may rewrite syntax.
+5. After a builder save, run the gate (`fs-developer-qa`): builders may rewrite syntax.
 6. Do not hand-edit platform manifests while the builder is editing them.
 7. A `pubspec.yaml` change usually needs a new run in the builder; tell the user.
 

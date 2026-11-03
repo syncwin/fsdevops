@@ -1,10 +1,10 @@
 ---
-name: fs-architect
+name: fs-developer-architect
 description: Planning stage of Full-Stack Developer. Detects the project (stack, workspace, packages, targets, state and routing libraries, builder-owned paths), runs one question round, researches official docs, and writes a PRD for new apps and features or a change brief for updates, ending in the single approval gate before any code is written. Invoked by fs-developer first. Use when the user asks directly for "plan this app", "write a PRD" or "what would this change touch".
 license: MIT
 metadata:
   displayName: "FS Architect"
-  version: "0.1.0"
+  version: "0.2.0"
   author: "@wasimness"
   company: "SyncWin"
 ---

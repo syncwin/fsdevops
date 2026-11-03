@@ -1,10 +1,10 @@
 ---
-name: fs-devops-engineer
-description: DevOps role skill of Full-Stack Developer. Sets up and checks the toolchain (Flutter SDK, Visual Studio C++ workload for Windows desktop, Android SDK and a physical device, Dart MCP server), flavors and per-environment config, and GitHub Actions CI that runs the same gate as fs-qa-engineer. Use when the user asks about setup, "flutter doctor" problems, flavors or CI.
+name: fs-developer-devops
+description: DevOps role skill of Full-Stack Developer. Sets up and checks the toolchain (Flutter SDK, Visual Studio C++ workload for Windows desktop, Android SDK and a physical device, Dart MCP server), flavors and per-environment config, and GitHub Actions CI that runs the same gate as fs-developer-qa. Use when the user asks about setup, "flutter doctor" problems, flavors or CI.
 license: MIT
 metadata:
   displayName: "FS DevOps Engineer"
-  version: "0.1.0"
+  version: "0.2.0"
   author: "@wasimness"
   company: "SyncWin"
 ---

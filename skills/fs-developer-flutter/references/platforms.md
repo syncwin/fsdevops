@@ -9,11 +9,11 @@ Windows desktop → Android → iOS → web (unless the PRD says otherwise). Sca
 - Desktop UX: keyboard shortcuts (`Shortcuts`/`Actions`), hover states, right-click menus (`MenuAnchor`), resizable layouts down to a minimum width, scroll bars visible, text selectable where useful.
 - Window title, size and minimum size: set in `windows/runner/main.cpp` and `win32_window.cpp`; add a window-management package only when runtime control is required (user's OK).
 - System tray, auto-start and file associations: only when the PRD asks; each needs a package or native code and the user's OK.
-- Packaging and release: `fs-release-manager`.
+- Packaging and release: `fs-developer-release`.
 
 ## Android
 - Prefer a physical phone over USB or wireless debugging on low-end PCs; the emulator needs a capable GPU.
-- Flavors for store builds versus FOSS builds when the PRD needs both (`fs-devops-engineer`).
+- Flavors for store builds versus FOSS builds when the PRD needs both (`fs-developer-devops`).
 
 ## iOS
 - Needs a Mac or a cloud macOS build service; on Windows mark iOS builds NOT RUN and name the service the user chose.

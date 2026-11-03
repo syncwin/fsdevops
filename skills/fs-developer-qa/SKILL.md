@@ -1,10 +1,10 @@
 ---
-name: fs-qa-engineer
+name: fs-developer-qa
 description: Verification stage of Full-Stack Developer. Runs the mechanical gate for Flutter and Dart projects (dart format, dart fix dry run, flutter analyze, flutter test, codegen check, a release build for the current target), the scope check against the approved brief, scenario tests and the shortcut-marker list. Reports PASS, FAIL or NOT RUN and never implies a skipped check passed. Invoked by fs-developer after a build and before delivery. Use when the user asks directly to audit any Flutter project.
 license: MIT
 metadata:
   displayName: "FS QA Engineer"
-  version: "0.1.0"
+  version: "0.2.0"
   author: "@wasimness"
   company: "SyncWin"
 ---
@@ -28,6 +28,6 @@ Compare the diff with the approved brief. Files, packages, permissions or depend
 Turn each "Done when" and parity item into a check: an automated test where possible, otherwise numbered manual steps on the current target with expected results. Desktop: keyboard-only pass, window resize to the minimum width, 200% text scale.
 
 ## 4. Pre-release
-Before `fs-release-manager`: gate green on the release target, version bumped, changelog entry, no debug flags, no `print`.
+Before `fs-developer-release`: gate green on the release target, version bumped, changelog entry, no debug flags, no `print`.
 
 Finish with a scratchpad: the gate table, scope findings, scenario results.

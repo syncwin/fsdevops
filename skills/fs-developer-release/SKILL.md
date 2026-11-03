@@ -1,10 +1,10 @@
 ---
-name: fs-release-manager
+name: fs-developer-release
 description: Release stage of Full-Stack Developer. Versions, changelogs, builds and packages apps for each target - Windows (release folder, MSIX, installer, Microsoft Store), Android (APK, App Bundle, Play internal testing, F-Droid), iOS (TestFlight via a Mac or cloud build) and web (static hosting) - with signing handled only through the user's own keys. Invoked by fs-developer at the ship step. Use when the user asks directly for packaging or publishing questions.
 license: MIT
 metadata:
   displayName: "FS Release Manager"
-  version: "0.1.0"
+  version: "0.2.0"
   author: "@wasimness"
   company: "SyncWin"
 ---
@@ -12,7 +12,7 @@ metadata:
 # FS Release Manager
 
 ## Every release
-1. Pre-release check (`fs-qa-engineer` §4) green on the release target.
+1. Pre-release check (`fs-developer-qa` §4) green on the release target.
 2. Version: `version: X.Y.Z+N` in the app's `pubspec.yaml` (semver for X.Y.Z, build number N always increases).
 3. `CHANGELOG.md`: Added / Changed / Fixed / Removed for X.Y.Z.
 4. Build, package, record artifact paths and sizes.

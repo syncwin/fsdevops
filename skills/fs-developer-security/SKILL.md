@@ -1,10 +1,10 @@
 ---
-name: fs-security-engineer
+name: fs-developer-security
 description: Security role skill of Full-Stack Developer, always applied to builds and loaded by review. Covers secrets (never in the app bundle or repo), secure token storage, personal-data privacy and local encryption, input validation, platform permissions, network security, deep-link safety, logging hygiene, and dependency health and licence checks. Use when the user asks any security, privacy or dependency-licence question about an app.
 license: MIT
 metadata:
   displayName: "FS Security Engineer"
-  version: "0.1.0"
+  version: "0.2.0"
   author: "@wasimness"
   company: "SyncWin"
 ---
@@ -25,6 +25,6 @@ metadata:
 Health and licence check before adding any package.
 
 ## Review lens
-When `fs-reviewer` runs the security lens, report findings with a weakness name (for example CWE-798 hard-coded credentials) and confidence.
+When `fs-developer-reviewer` runs the security lens, report findings with a weakness name (for example CWE-798 hard-coded credentials) and confidence.
 
 Finish with a scratchpad: secrets found or ruled out, storage, dependency checks.

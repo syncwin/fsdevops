@@ -1,10 +1,10 @@
 ---
-name: fs-performance-engineer
+name: fs-developer-performance
 description: Performance role skill of Full-Stack Developer for Flutter. Sets and checks budgets for frame time, startup, memory, list scrolling, image use, app size and web first load, and profiles with DevTools in profile mode. Loaded when a plan lists performance or a reviewer flags it. Use when the user asks directly for jank, slow startup, large builds or memory questions.
 license: MIT
 metadata:
   displayName: "FS Performance Engineer"
-  version: "0.1.0"
+  version: "0.2.0"
   author: "@wasimness"
   company: "SyncWin"
 ---

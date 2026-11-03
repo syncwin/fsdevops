@@ -1,17 +1,17 @@
 ---
-name: fs-ui-developer
+name: fs-developer-ui
 description: UI role skill of Full-Stack Developer for Flutter. Builds widgets and screens, adaptive layouts across desktop, tablet, phone and web (window size classes, NavigationRail and NavigationBar, keyboard and mouse on desktop), feed and list UIs with mixed card types and swipe actions, loading, empty and error states, and design tokens in code. Loaded by the build skills when a plan touches UI. Use when the user asks directly for layout, widget or feed-UI questions.
 license: MIT
 metadata:
   displayName: "FS UI Developer"
-  version: "0.1.0"
+  version: "0.2.0"
   author: "@wasimness"
   company: "SyncWin"
 ---
 
 # FS UI Developer
 
-Applies `fs-developer/references/accessibility.md`, `i18n.md` and `fs-flutter-developer/references/theming.md`.
+Applies `fs-developer/references/accessibility.md`, `i18n.md` and `fs-developer-flutter/references/theming.md`.
 
 ## Adaptive layout
 - Size classes from `MediaQuery.sizeOf(context).width`: compact <600, medium <840, expanded >=840.
