@@ -1,0 +1,57 @@
+{
+  "prompts": [
+    {
+      "id": "fe1425fea87d5e91ecb0270ba173ae69",
+      "title": "Full-Stack Developer",
+      "description": "Full-Stack Developer: plan, build, update, verify, review and release apps across stacks. Fill in the task and run Full-Stack Developer in one step.",
+      "content": "# Full-Stack Developer\n\nRun /fs-developer and help me with the task below. Talk to me in plain words and ask only what you need from me.\n\n* **Task:** `{{task}}`\n* **Stage:** `{{stage}}`\n* **Files:** `{{files}}`\n* **Details:** `{{details}}`\n\nIf something you need is missing, ask for it in one short message, then continue.\n\nBefore you create, change, send, publish, or delete anything, show a short plan and wait for my yes. Read-only checks run without it.",
+      "variables": {
+        "task": {
+          "type": "Textarea",
+          "label": "Task",
+          "placeholder": "Describe what you need in your own words.",
+          "context": "What goes in, what should come out, and any rules it must follow.",
+          "maxLength": 3000,
+          "required": true,
+          "options": ""
+        },
+        "stage": {
+          "type": "Radio",
+          "label": "Stage",
+          "placeholder": "stage",
+          "context": "Pick the step to run. Not sure: leave it on the first option and the entry skill decides. Skills: FS API Developer = /fs-developer:fs-api-developer; FS Architect = /fs-developer:fs-architect; FS DevOps Engineer = /fs-developer:fs-devops-engineer; FS Flutter Developer = /fs-developer:fs-flutter-developer; FS Maintainer = /fs-developer:fs-maintainer; FS Performance Engineer = /fs-developer:fs-performance-engineer; FS QA Engineer = /fs-developer:fs-qa-engineer; FS Release Manager = /fs-developer:fs-release-manager; FS Reviewer = /fs-developer:fs-reviewer; FS Security Engineer = /fs-developer:fs-security-engineer; FS UI Developer = /fs-developer:fs-ui-developer.",
+          "maxLength": "",
+          "required": false,
+          "options": "Let It Decide\nFS API Developer\nFS Architect\nFS DevOps Engineer\nFS Flutter Developer\nFS Maintainer\nFS Performance Engineer\nFS QA Engineer\nFS Release Manager\nFS Reviewer\nFS Security Engineer\nFS UI Developer"
+        },
+        "files": {
+          "type": "Checkbox",
+          "label": "Files",
+          "placeholder": "files",
+          "context": "Where the files for this task are, if there are any.",
+          "maxLength": "",
+          "required": false,
+          "options": "Attached in This Message\nIn the Claude Project Files\nCreated Earlier in This Chat\nNone, Start from Scratch"
+        },
+        "details": {
+          "type": "Textarea",
+          "label": "Details",
+          "placeholder": "Anything else: deadlines, names, examples, things to avoid.",
+          "context": "Everything the task needs that isn&#x27;t a file.",
+          "maxLength": 2000,
+          "required": false,
+          "options": ""
+        }
+      },
+      "lastModified": "2026-11-03T12:13:11.753Z",
+      "created": "2026-11-03T12:13:11.753Z"
+    }
+  ],
+  "metadata": {
+    "exportDate": "2026-11-03T12:13:11.753Z",
+    "version": "2.0",
+    "format": "prompt-builder-plain",
+    "count": 1,
+    "checksum": "-9vapbe"
+  }
+}

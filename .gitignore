@@ -1,0 +1,9 @@
+node_modules/
+vendor/
+.DS_Store
+*.zip
+.fs-tools/
+baseline/
+.dart_tool/
+build/
+evals/results/

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "syncwin-fs-developer",
+  "description": "Claude plugins from SyncWin for building and shipping production-grade apps.",
+  "owner": {
+    "name": "SyncWin",
+    "email": "support@syncwin.com",
+    "url": "https://syncwin.com"
+  },
+  "plugins": [
+    {
+      "name": "fs-developer",
+      "displayName": "Full-Stack Developer",
+      "source": "./",
+      "description": "Build, update, test, review and release apps with a mechanical QA gate and an independent reviewer. Flutter first: Windows desktop, then Android, iOS and web.",
+      "author": {
+        "name": "@wasimness",
+        "email": "support@syncwin.com",
+        "url": "https://syncwin.com"
+      },
+      "homepage": "https://syncwin.com",
+      "license": "MIT",
+      "category": "development",
+      "keywords": ["flutter", "dart", "desktop", "mobile", "web", "code-review"]
+    }
+  ]
+}
