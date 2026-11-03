@@ -4,7 +4,7 @@ description: Change stage for existing app code in Full-Stack DevOps. Fixes bugs
 license: MIT
 metadata:
   displayName: "FSDevOps Maintainer"
-  version: "0.3.0"
+  version: "0.3.1"
   author: "@wasimness"
   company: "SyncWin"
 ---

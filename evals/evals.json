@@ -16,7 +16,7 @@
     {"id": 13, "skill": "fsdevops-qa", "prompt": "Translate my app strings to Hindi", "expected_output": "Not a QA request.", "should_trigger": false},
     {"id": 14, "skill": "fsdevops-reviewer", "prompt": "Review lib/ for security issues", "expected_output": "Read-only, security lens, only findings with confidence >= 80 in the fixed format, Unverified suspicions list, one-line verdict.", "should_trigger": true},
     {"id": 15, "skill": "fsdevops-reviewer", "prompt": "Is this code over-engineered?", "expected_output": "Lean lens: flags unused abstractions, duplicate utilities, a second state library; verdict line.", "should_trigger": true},
-    {"id": 16, "skill": "fsdevops-reviewer", "prompt": "Fix all the lint warnings", "expected_output": "Reviewer does not edit; fixing belongs to the build or maintainer skill.", "should_trigger": false},
+    {"id": 16, "skill": "fsdevops-reviewer", "prompt": "Fix all the lint warnings", "expected_output": "Treats it as maintainer work, not a read-only review. With the read-only tools of this test it lists the likely warnings and the fix plan or says it needs edit and run access; it never claims the warnings are fixed.", "should_trigger": true},
     {"id": 17, "skill": "fsdevops-release", "prompt": "Package my Flutter app for Windows", "expected_output": "Pre-release check, version and changelog, flutter build windows --release, ships the Release folder or MSIX with the user's certificate; asks before publishing.", "should_trigger": true},
     {"id": 18, "skill": "fsdevops-ci", "prompt": "flutter doctor says Visual Studio is missing", "expected_output": "Explains the Desktop development with C++ workload, asks before installing, re-runs flutter doctor -v and flutter devices.", "should_trigger": true}
   ]

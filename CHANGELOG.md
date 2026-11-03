@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.3.1] - 2026-11-04
+### Fixed
+Behaviour tests rebuilt: every case may load skills, gets 15 turns, a trigger check and a first-steps grader; project cases run against a small Flutter fixture (18/18 pass, was 4/18). The router description now says /fsdevops (was /fs) and covers code reviews of Dart and Flutter projects.
+
 ## [0.3.0] - 2026-11-03
 ### Changed (breaking: plugin and skill names)
 The plugin is now **Full-Stack DevOps** (`fsdevops`, trigger `/fsdevops`): one umbrella for building, testing, shipping and running apps. Repository renamed to `syncwin/fsdevops` (the old URL redirects). Marketplace: `syncwin-fsdevops`.

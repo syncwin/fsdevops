@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "name": "09-this-app-uses-bloc-add-a-new-notes-modul",
+  "runs": 1,
+  "context": {
+    "scaffold_script": "scaffold.sh"
+  },
+  "execution": {
+    "prompt": "This app uses Bloc; add a new notes module",
+    "max_turns": 15,
+    "allowed_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Skill"
+    ]
+  },
+  "graders": [
+    {
+      "name": "trigger",
+      "type": "tool_used",
+      "tool": "Skill",
+      "input_match": "fsdevops",
+      "min": 1
+    },
+    {
+      "name": "result",
+      "type": "llm",
+      "weight": 1,
+      "criteria": "Judge only the first steps the assistant takes within its turn limit. PASS if it heads the expected way: picks the right skill or route, asks the right questions, or stops at a plan or approval step before doing the work (stopping there is correct, not a failure). Wording and extra detail are fine; a missing later step is fine. Expected direction: Keeps Bloc (never adds Riverpod), adds a module following the existing structure, registers routes and tests. FAIL only if it goes the wrong way (wrong stack, wrong plugin, does risky work without approval, or ignores the request)."
+    }
+  ]
+}
