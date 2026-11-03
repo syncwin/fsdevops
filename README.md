@@ -28,7 +28,7 @@ Role skills: UI, API and offline data, security, performance, devops, release. A
 If a visual builder (for example Nowa) edits part of the UI, record it in `.claude/ownership.md`; the plugin follows builder-safe editing rules for those paths. It never operates other apps itself: app-operator plugins can do that and may call this plugin, never the other way around.
 
 ## Not for
-WordPress (use `fswp-developer`).
+WordPress (use `fswpdevops`).
 
 ## License
 MIT. See `CREDITS.md` for the projects that shaped it and `SECURITY.md` for reporting issues. Contact: support@syncwin.com.
