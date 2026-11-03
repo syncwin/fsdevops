@@ -1,12 +1,12 @@
-# Full-Stack Developer (`fs-developer`)
+# Full-Stack DevOps (`fsdevops`)
 
 A Claude plugin that takes an app from idea to release: plan, build, update, test, review and ship. **Flutter first** (Windows desktop, then Android, iOS and web). More stacks (React, Next.js and others) plug in later as their own build skills, sharing the same lifecycle.
 
 ## What it does
-`/fs` (or just ask to build, fix, test, review or release app code) runs:
+`/fsdevops` (or just ask to build, fix, test, review or release app code) runs:
 
 1. **Architect**: detects the project, asks up to five questions, writes a PRD or change brief, gets one approval.
-2. **Build**: `fs-developer-flutter` for new apps and modules (pub workspace, module registry with runtime on/off, Riverpod 3, go_router, Material 3 tokens), `fs-developer-maintainer` for changes.
+2. **Build**: `fsdevops-flutter` for new apps and modules (pub workspace, module registry with runtime on/off, Riverpod 3, go_router, Material 3 tokens), `fsdevops-maintainer` for changes.
 3. **QA gate**: format, fix, analyze, test, codegen and a release build, reported as PASS / FAIL / NOT RUN.
 4. **Independent review** by a read-only agent, one lens per pass.
 5. **Release**: versions, changelog, Windows / Android / iOS / web packaging.
@@ -21,7 +21,7 @@ Role skills: UI, API and offline data, security, performance, devops, release. A
 ## Install
 ```
 /plugin marketplace add <path-or-repo>
-/plugin install fs-developer@syncwin-fs-developer
+/plugin install fsdevops@syncwin-fsdevops
 ```
 
 ## Works with visual builders

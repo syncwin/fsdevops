@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
-  "name": "syncwin-fs-developer",
+  "name": "syncwin-fsdevops",
   "description": "Claude plugins from SyncWin for building and shipping production-grade apps.",
   "owner": {
     "name": "SyncWin",
@@ -9,8 +9,8 @@
   },
   "plugins": [
     {
-      "name": "fs-developer",
-      "displayName": "Full-Stack Developer",
+      "name": "fsdevops",
+      "displayName": "Full-Stack DevOps",
       "source": "./",
       "description": "Build, update, test, review and release apps with a mechanical QA gate and an independent reviewer. Flutter first: Windows desktop, then Android, iOS and web.",
       "author": {

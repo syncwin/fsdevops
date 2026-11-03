@@ -1,8 +1,8 @@
 {
-  "name": "fs-developer",
-  "displayName": "Full-Stack Developer",
-  "version": "0.2.0",
-  "description": "Full-Stack Developer: plan, build, update, verify, review and release apps across stacks. Flutter first (Windows desktop, then mobile and web); more stacks plug in later.",
+  "name": "fsdevops",
+  "displayName": "Full-Stack DevOps",
+  "version": "0.3.0",
+  "description": "Full-Stack DevOps: plan, build, update, verify, review and release apps across stacks. Flutter first (Windows desktop, then mobile and web); more stacks plug in later.",
   "author": {
     "name": "@wasimness",
     "company": "SyncWin",
@@ -10,7 +10,7 @@
     "url": "https://syncwin.com"
   },
   "homepage": "https://syncwin.com",
-  "repository": "https://github.com/syncwin/fs-developer",
+  "repository": "https://github.com/syncwin/fsdevops",
   "license": "MIT",
   "icon": "./assets/icon.png",
   "keywords": [
@@ -24,18 +24,18 @@
     "qa",
     "code-review"
   ],
-  "documentationUrl": "https://github.com/syncwin/fs-developer#readme",
-  "supportUrl": "https://github.com/syncwin/fs-developer/issues",
+  "documentationUrl": "https://github.com/syncwin/fsdevops#readme",
+  "supportUrl": "https://github.com/syncwin/fsdevops/issues",
   "privacyPolicyUrl": "https://syncwin.com/privacy-policy/",
   "termsOfServiceUrl": "https://syncwin.com/terms-and-conditions/",
   "metadata": {
-    "displayName": "Full-Stack Developer",
-    "version": "0.2.0",
+    "displayName": "Full-Stack DevOps",
+    "version": "0.3.0",
     "releaseStage": "beta",
     "author": "@wasimness",
     "company": "SyncWin",
     "homepage": "https://syncwin.com",
-    "repository": "https://github.com/syncwin/fs-developer",
+    "repository": "https://github.com/syncwin/fsdevops",
     "license": "MIT"
   }
 }
