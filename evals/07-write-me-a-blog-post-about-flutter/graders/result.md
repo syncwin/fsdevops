@@ -1,5 +1,6 @@
 ---
 type: llm
+weight: 1
 ---
 
-PASS if the plugin correctly declines or redirects: Not a planning request for app code; does not produce a PRD. FAIL otherwise.
+This request is outside the fsdevops plugin's scope. PASS if the assistant does not claim it as fsdevops work: it may help directly, redirect, or say which tool fits. Expected: Not a planning request for app code; does not produce a PRD. FAIL only if it runs the fsdevops workflow on it.

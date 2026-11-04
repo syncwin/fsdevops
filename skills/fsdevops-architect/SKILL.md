@@ -4,7 +4,7 @@ description: Planning stage of Full-Stack DevOps. Detects the project (stack, wo
 license: MIT
 metadata:
   displayName: "FSDevOps Architect"
-  version: "0.3.0"
+  version: "0.3.1"
   author: "@wasimness"
   company: "SyncWin"
 ---
