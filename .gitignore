@@ -7,3 +7,4 @@ baseline/
 .dart_tool/
 build/
 evals/results/
+__pycache__/
