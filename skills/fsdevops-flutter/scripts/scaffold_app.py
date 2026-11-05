@@ -327,10 +327,10 @@ secrets*.json
 !secrets*.example.json
 """)
     write(root / ".pre-commit-config.yaml", """
-# Run `pre-commit install` once. Pin `rev` to a released tag and review it when updating.
+# Run `pre-commit install` once. `rev` is pinned to a full commit SHA (tag in the comment); review it when updating.
 repos:
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.24.2
+    rev: d5c275d6b2140fcb59bc3f58b8dd5350f5b19df6  # v8.24.2
     hooks:
       - id: gitleaks
 """)

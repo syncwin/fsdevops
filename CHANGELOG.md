@@ -6,6 +6,7 @@
 - Secure-by-default baseline in fsdevops-security (threat model, secret scanning, least privilege, supply chain, signed releases, release gate); PRD and change-brief threat-model sections; CI security job template; scaffold writes a secret-safe .gitignore and a gitleaks pre-commit config; Critical or Important security findings block release.
 
 ### Fixed
+- Review fixes: the Dart format hook resolves dart.exe directly (never a .bat) and skips paths containing & | < > ^ % " with a logged warning (BatBadBut); CI and pre-commit examples pin actions and gitleaks to full commit SHAs (checkout v4, flutter-action v2, gitleaks v8.24.2).
 - Dart format hook, QA gate and scaffold script no longer use a shell on Windows (command injection through file paths or --org/--modules/--platforms); inputs are validated with allow-list patterns.
 
 ## [0.3.1] - 2026-11-04
