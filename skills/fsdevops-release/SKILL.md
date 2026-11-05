@@ -4,7 +4,7 @@ description: Release stage of Full-Stack DevOps. Versions, changelogs, builds an
 license: MIT
 metadata:
   displayName: "FSDevOps Release Manager"
-  version: "0.3.1"
+  version: "0.3.2"
   author: "@wasimness"
   company: "SyncWin"
 ---
@@ -12,7 +12,7 @@ metadata:
 # FSDevOps Release Manager
 
 ## Every release
-1. Pre-release check (`fsdevops-qa` §4) green on the release target.
+1. Pre-release check (`fsdevops-qa` §4) green on the release target, **security gate** passed: reviewer security lens has no Critical or Important findings, secret scan and dependency audit run (or NOT RUN, named), `fsdevops-security` §Secure by default satisfied.
 2. Version: `version: X.Y.Z+N` in the app's `pubspec.yaml` (semver for X.Y.Z, build number N always increases).
 3. `CHANGELOG.md`: Added / Changed / Fixed / Removed for X.Y.Z.
 4. Build, package, record artifact paths and sizes.
@@ -22,6 +22,6 @@ metadata:
 Windows, Android, iOS, web: commands, packaging and signing.
 
 ## Signing
-Keys and certificates belong to the user. Never create, store or commit them in the repo; reference them via environment variables or CI secrets and give the user the steps.
+Keys and certificates belong to the user. Never create, store or commit them in the repo; reference them via environment variables or CI secrets and give the user the steps. Release artifacts are signed with those keys and shipped with a SHA-256 checksum file; build from a clean checkout of the tagged commit.
 
 Finish with a scratchpad: version, artifacts, what was published (or waiting for a yes).

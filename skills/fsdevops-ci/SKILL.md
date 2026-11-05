@@ -4,7 +4,7 @@ description: DevOps role skill of Full-Stack DevOps. Sets up and checks the tool
 license: MIT
 metadata:
   displayName: "FSDevOps CI Engineer"
-  version: "0.3.1"
+  version: "0.3.2"
   author: "@wasimness"
   company: "SyncWin"
 ---

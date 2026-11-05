@@ -4,6 +4,7 @@
 Skips generated files and does nothing when Dart is not installed. Never blocks the edit.
 """
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -14,7 +15,12 @@ try:
 except Exception:
     sys.exit(0)
 
-if (path.endswith(".dart") and not path.endswith((".g.dart", ".freezed.dart"))
-        and shutil.which("dart")):
-    subprocess.run(["dart", "format", path], capture_output=True, shell=sys.platform == "win32", timeout=25)
+# Fail open (formatting is a convenience), but never via a shell: the path is untrusted input.
+dart = shutil.which("dart")
+if (isinstance(path, str) and path.endswith(".dart") and not path.endswith((".g.dart", ".freezed.dart"))
+        and dart and os.path.isfile(path)):
+    try:
+        subprocess.run([dart, "format", "--", os.path.abspath(path)], capture_output=True, timeout=25)
+    except Exception:
+        pass
 sys.exit(0)

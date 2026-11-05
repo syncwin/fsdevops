@@ -4,7 +4,7 @@ description: Verification stage of Full-Stack DevOps. Runs the mechanical gate f
 license: MIT
 metadata:
   displayName: "FSDevOps QA Engineer"
-  version: "0.3.1"
+  version: "0.3.2"
   author: "@wasimness"
   company: "SyncWin"
 ---
@@ -28,6 +28,6 @@ Compare the diff with the approved brief. Files, packages, permissions or depend
 Turn each "Done when" and parity item into a check: an automated test where possible, otherwise numbered manual steps on the current target with expected results. Desktop: keyboard-only pass, window resize to the minimum width, 200% text scale.
 
 ## 4. Pre-release
-Before `fsdevops-release`: gate green on the release target, version bumped, changelog entry, no debug flags, no `print`.
+Before `fsdevops-release`: gate green on the release target, version bumped, changelog entry, no debug flags, no `print`, secret scan and dependency audit run (NOT RUN if the tool is missing).
 
 Finish with a scratchpad: the gate table, scope findings, scenario results.

@@ -4,7 +4,7 @@ description: Security role skill of Full-Stack DevOps, always applied to builds 
 license: MIT
 metadata:
   displayName: "FSDevOps Security Engineer"
-  version: "0.3.1"
+  version: "0.3.2"
   author: "@wasimness"
   company: "SyncWin"
 ---
@@ -21,8 +21,17 @@ metadata:
 7. **Logs:** no tokens, passwords or personal data; release builds log errors only.
 8. **Permissions:** request at the moment of use with a reason; declare only what is used.
 
+## Secure by default (every project; this is the single source, other skills link here)
+1. **Threat model** in every PRD and change brief: assets, entry points, who can attack, top 3 abuse cases and the control for each. Update it when scope changes.
+2. **Secret scanning:** gitleaks as a pre-commit hook (`scaffold_app.py` writes `.pre-commit-config.yaml` and a secret-safe `.gitignore`) and as a CI job. Check every diff for `github_pat_`, `ghp_`, `sk-`, `Bearer `, `password=` before commit; a hit stops the work.
+3. **Least privilege:** CI `permissions: contents: read` by default, per-job escalation only; scoped, short-lived tokens; release secrets only in the release job.
+4. **Supply chain:** pin and audit (`references/dependencies.md`); no install scripts from unreviewed packages.
+5. **Signed releases:** sign with the user's own keys, publish SHA-256 checksums, never from an unverified build (`fsdevops-release`).
+6. **Gate:** any Critical or Important security finding from `fsdevops-reviewer` blocks release until fixed or explicitly accepted in writing by the user.
+7. **Plugin and tooling code:** never run a shell with untrusted input (file paths, names); pass argument lists, quote `${CLAUDE_PLUGIN_ROOT}`, validate names with an allow-list pattern. Guards that protect security fail closed; formatting and nag hooks fail open.
+
 ## Dependencies (`references/dependencies.md`)
-Health and licence check before adding any package.
+Health, licence, pinning and audit before adding any package.
 
 ## Review lens
 When `fsdevops-reviewer` runs the security lens, report findings with a weakness name (for example CWE-798 hard-coded credentials) and confidence.

@@ -26,6 +26,9 @@ Endpoints or mock repositories, auth, offline behaviour.
 ## Non-functional
 Accessibility (`accessibility.md`), i18n locales, performance budget, security notes.
 
+## Threat model
+Assets (data, keys, accounts) · entry points (inputs, deep links, network, files) · top 3 abuse cases with the control for each. Rules: `fsdevops-security`.
+
 ## Domains touched
 UI / API / security / performance / devops / release.
 
