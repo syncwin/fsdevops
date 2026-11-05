@@ -4,7 +4,7 @@ description: Security role skill of Full-Stack DevOps, always applied to builds 
 license: MIT
 metadata:
   displayName: "FSDevOps Security Engineer"
-  version: "0.3.2"
+  version: "0.3.3"
   author: "@wasimness"
   company: "SyncWin"
 ---

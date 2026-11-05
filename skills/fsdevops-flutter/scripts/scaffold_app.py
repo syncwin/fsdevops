@@ -8,6 +8,7 @@ Usage:
 Needs the Flutter SDK on PATH for `flutter create` (skip with --no-create).
 """
 import argparse
+import datetime
 import re
 import shutil
 import subprocess
@@ -87,6 +88,7 @@ def main():
         text = re.sub(r"^(environment:)", "resolution: workspace\n\n\\1", text, count=1, flags=re.M)
         text = re.sub(r"(^dependencies:\n  flutter:\n    sdk: flutter\n)",
                       "\\1  flutter_riverpod: ^3.0.0\n  go_router: ^16.0.0\n" + extra, text, count=1, flags=re.M)
+        text = re.sub(r"^version:.*$", "version: 0.0.1+1", text, count=1, flags=re.M)
         pub.write_text(text, encoding="utf-8")
         (app_dir / "lib/main.dart").write_text(
             "import 'package:flutter/material.dart';\n"
@@ -341,6 +343,89 @@ repos:
 | packages/{p}_ui/** | Visual builder | Builder-safe rules in fsdevops/references/ownership.md; commit before and after |
 | **/*.g.dart, **/*.freezed.dart | build_runner | Never edit; regenerate |
 """)
+
+    # Documentation standard (fsdevops/references/coding-standards.md): written once, then kept current with the code.
+    today = datetime.date.today().isoformat()
+    title = a.name.replace("_", " ").title()
+    write(root / "README.md", f"""
+# {title}
+
+FILL IN: one sentence on what the app does and for whom.
+
+## Quick start
+```
+flutter pub get
+flutter run -d windows
+```
+
+More: [setup](docs/setup.md), [architecture](docs/architecture.md), [ops](docs/ops.md), [features](docs/features/README.md), [changelog](CHANGELOG.md).
+""")
+    write(root / "CHANGELOG.md", f"""
+# Changelog
+
+Format: [Keep a Changelog 1.1.0](https://keepachangelog.com/en/1.1.0/); versions: [SemVer 2.0.0](https://semver.org/spec/v2.0.0.html). Pre-1.0 is beta.
+
+## [Unreleased]
+
+## [0.0.1] - {today}
+
+### Added
+- Initial scaffold: pub workspace, module registry ({", ".join(modules)}), theme, router.
+""")
+    write(root / "docs/setup.md", """
+# Setup
+
+1. Install the Flutter SDK; run `flutter doctor -v` (Windows desktop needs Visual Studio with the C++ desktop workload).
+2. From the repo root: `flutter pub get`.
+3. Run: `flutter run -d windows` (or `-d chrome`, an Android device or emulator).
+4. Test: `flutter test`. Quality gate: `qa_gate.py` and `docs_gate.py` from the fsdevops-qa skill.
+""")
+    write(root / "docs/architecture.md", f"""
+# Architecture
+
+- Pub workspace: `apps/{a.name}` (shell), `packages/{p}_core` (module contract, enabled-module ids), `packages/{p}_ui` (theme tokens), one package per module: {", ".join(mod_pkgs)}.
+- Each module exposes one `AppModule` (id, title, icon, routes); the shell lists them once in `lib/registry.dart` and builds routes from the enabled set.
+- State: Riverpod. Routing: go_router. Theme: Material 3 with `AppTokens`.
+- FILL IN: data layer, external services, platform notes as they appear.
+""")
+    write(root / "docs/ops.md", f"""
+# Ops
+
+- Build: `flutter build windows --release` (also `apk`, `appbundle`, `web`).
+- Release: move `[Unreleased]` in CHANGELOG.md into the new version, set `version:` in `apps/{a.name}/pubspec.yaml`, tag, build from a clean checkout.
+- Config and secrets: never committed; see `.gitignore` and `.pre-commit-config.yaml` (gitleaks).
+- Troubleshooting: FILL IN as issues are found.
+""")
+    rows = []
+    for m in modules:
+        slug = m.replace("_", "-")
+        rows.append(f"| {m.replace('_', ' ').title()} | planned | 0.0.1 | [{slug}.md]({slug}.md) |")
+        write(root / f"docs/features/{slug}.md", """
+# __TITLE__
+
+**Status:** planned | **Since:** 0.0.1 | **Updated:** 0.0.1
+
+## Context
+FILL IN: why this feature exists and who uses it.
+
+## Behaviour
+FILL IN: what the user sees and does; states; edge cases; errors; permissions.
+
+## How it works
+FILL IN: flow, components and files, data, APIs, config. Code: `packages/__PKG__/`.
+
+## UI
+FILL IN: text description of layout, controls and states (no screenshots needed).
+
+## Limits & known issues
+None yet.
+
+## History
+- 0.0.1: planned (module scaffolded)
+""".replace("__TITLE__", m.replace("_", " ").title()).replace("__PKG__", f"{p}_{m}"))
+    write(root / "docs/features/README.md", "# Features\n\nOne file per feature. Keep this table current (status, since version).\n\n"
+          "| Feature | Status | Since | File |\n|---|---|---|---|\n" + "\n".join(rows) + "\n")
+
 
     print("Written:\n  " + "\n  ".join(WRITTEN) if WRITTEN else "Written: none")
     if SKIPPED:

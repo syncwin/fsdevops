@@ -4,7 +4,7 @@ description: Independent review stage of Full-Stack DevOps. Reviews finished app
 license: MIT
 metadata:
   displayName: "FSDevOps Reviewer"
-  version: "0.3.2"
+  version: "0.3.3"
   author: "@wasimness"
   company: "SyncWin"
 ---
@@ -17,7 +17,7 @@ Read-only. Scope: the folder and the approved brief; never the build transcript.
 | Lens | Look for |
 |---|---|
 | security | `fsdevops-security` rules: secrets in code or config, tokens in plain storage or logs, unvalidated deep links, risky permissions, unsafe dependencies |
-| quality | bugs, unhandled errors and states, `BuildContext` across async gaps, state leaks, wrong provider scope, missing tests for changed behaviour, broken ownership rules |
+| quality | docs out of step with the change (`coding-standards.md` Documentation standard: changelog line, feature file, index), bugs, unhandled errors and states, `BuildContext` across async gaps, state leaks, wrong provider scope, missing tests for changed behaviour, broken ownership rules |
 | lean | code the plan didn't need, duplicate utilities, abstractions with one use, a second state or routing library (`fsdevops/references/lean-coding.md`) |
 | a11y | missing semantics, small targets, contrast, keyboard paths on desktop |
 | performance | rebuild storms, unbounded lists, heavy `build`, oversized images |
