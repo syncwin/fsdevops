@@ -16,7 +16,11 @@ WIN = sys.platform == "win32"
 
 def run(cmd, cwd):
     try:
-        p = subprocess.run(cmd, cwd=cwd, capture_output=True, text=True, shell=WIN, timeout=1800)
+        # No shell: resolve the executable (flutter.bat on Windows) and pass a fixed argument list.
+        exe = shutil.which(cmd[0])
+        if not exe:
+            return 127, [f"{cmd[0]} not found on PATH"]
+        p = subprocess.run([exe, *cmd[1:]], cwd=cwd, capture_output=True, text=True, timeout=1800)
         out = (p.stdout + p.stderr).strip().splitlines()
         return p.returncode, out[-15:]
     except subprocess.TimeoutExpired:

@@ -5,6 +5,7 @@
 - **Parity list:** behaviour that must stay the same.
 - **Risks:** migrations, data loss, builder-owned or generated paths, platform differences.
 - **Tests:** new or changed tests that prove the fix.
+- **Threat model:** new input, data, permission, dependency or token this change adds, and its control ("none" if it adds none).
 - **Rollback:** how to undo (revert commit, migration down step).
 - **Domains touched:**
 - **Done when:** gate green, scenarios pass, reviewer clean.

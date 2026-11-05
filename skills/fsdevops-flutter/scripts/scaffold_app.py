@@ -57,6 +57,12 @@ def main():
     for v in (a.name, a.prefix):
         if not re.fullmatch(r"[a-z][a-z0-9_]*", v):
             sys.exit(f"Use lower_snake_case: {v}")
+    if not re.fullmatch(r"[a-z][a-z0-9]*(\.[a-z][a-z0-9_]*)+", a.org):
+        sys.exit(f"--org must be a reverse-domain id such as com.example: {a.org}")
+    if not re.fullmatch(r"[a-z][a-z0-9_]*(,\s*[a-z][a-z0-9_]*)*", a.modules):
+        sys.exit(f"--modules must be comma-separated lower_snake_case: {a.modules}")
+    if not re.fullmatch(r"(windows|android|ios|web|linux|macos)(,(windows|android|ios|web|linux|macos))*", a.platforms):
+        sys.exit(f"--platforms must be a comma list of windows,android,ios,web,linux,macos: {a.platforms}")
     root = Path(a.dir).resolve()
     app_dir = root / "apps" / a.name
     p = a.prefix
@@ -65,12 +71,13 @@ def main():
 
     created = False
     if not a.no_create:
-        if not shutil.which("flutter"):
+        flutter = shutil.which("flutter")
+        if not flutter:
             sys.exit("Flutter SDK not on PATH. Install it or pass --no-create.")
         if not (app_dir / "pubspec.yaml").exists():
-            subprocess.run(["flutter", "create", "--org", a.org, "--project-name", a.name,
+            subprocess.run([flutter, "create", "--org", a.org, "--project-name", a.name,
                             "--platforms", a.platforms, "--empty", str(app_dir)],
-                           check=True, shell=sys.platform == "win32")
+                           check=True)
             created = True
     if created:
         # Only files flutter create just made are changed here.
@@ -302,6 +309,30 @@ void main() {{
     expect(find.text('{camel(modules[0])}'), findsOneWidget);
   }});
 }}
+""")
+    # Secure by default (rules: fsdevops-security): secrets never committed, scanned before every commit.
+    write(root / ".gitignore", """
+.dart_tool/
+build/
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+key.properties
+secrets*.json
+!secrets*.example.json
+""")
+    write(root / ".pre-commit-config.yaml", """
+# Run `pre-commit install` once. `rev` is pinned to a full commit SHA (tag in the comment); review it when updating.
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: d5c275d6b2140fcb59bc3f58b8dd5350f5b19df6  # v8.24.2
+    hooks:
+      - id: gitleaks
 """)
     if a.builder_ui:
         write(root / ".claude/ownership.md", f"""

@@ -4,7 +4,7 @@ description: Independent review stage of Full-Stack DevOps. Reviews finished app
 license: MIT
 metadata:
   displayName: "FSDevOps Reviewer"
-  version: "0.3.1"
+  version: "0.3.2"
   author: "@wasimness"
   company: "SyncWin"
 ---
@@ -32,6 +32,6 @@ Fix: <smallest change>
 Only confidence >= 80. Security lens adds an "Unverified suspicions" list below 80.
 
 ## Verdict
-One line: `PASS` (no Critical or Important), or `FAIL: N Critical, M Important`.
+One line: `PASS` (no Critical or Important), or `FAIL: N Critical, M Important`. A security-lens FAIL blocks release (`fsdevops-release`).
 
 Finish with a scratchpad: lens, scope, verdict.

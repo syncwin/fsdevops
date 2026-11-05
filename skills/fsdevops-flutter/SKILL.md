@@ -4,7 +4,7 @@ description: Flutter build skill of Full-Stack DevOps. Creates new Flutter apps 
 license: MIT
 metadata:
   displayName: "FSDevOps Flutter Developer"
-  version: "0.3.1"
+  version: "0.3.2"
   author: "@wasimness"
   company: "SyncWin"
 ---

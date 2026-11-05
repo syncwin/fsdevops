@@ -4,7 +4,7 @@ description: UI role skill of Full-Stack DevOps for Flutter. Builds widgets and 
 license: MIT
 metadata:
   displayName: "FSDevOps UI Developer"
-  version: "0.3.1"
+  version: "0.3.2"
   author: "@wasimness"
   company: "SyncWin"
 ---

@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.2] - 2026-11-05
+
+### Added
+- Secure-by-default baseline in fsdevops-security (threat model, secret scanning, least privilege, supply chain, signed releases, release gate); PRD and change-brief threat-model sections; CI security job template; scaffold writes a secret-safe .gitignore and a gitleaks pre-commit config; Critical or Important security findings block release.
+
+### Fixed
+- Review fixes: the Dart format hook resolves dart.exe directly (never a .bat) and skips paths containing & | < > ^ % " with a logged warning (BatBadBut); CI and pre-commit examples pin actions and gitleaks to full commit SHAs (checkout v4, flutter-action v2, gitleaks v8.24.2).
+- Dart format hook, QA gate and scaffold script no longer use a shell on Windows (command injection through file paths or --org/--modules/--platforms); inputs are validated with allow-list patterns.
+
 ## [0.3.1] - 2026-11-04
 ### Fixed
 Behaviour tests rebuilt: every case may load skills, gets 15 turns, a trigger check and a first-steps grader; project cases run against a small Flutter fixture (18/18 pass, was 4/18). The router description now says /fsdevops (was /fs) and covers code reviews of Dart and Flutter projects.
