@@ -3,6 +3,7 @@
 
 Usage: python qa_gate.py <dir> [--target windows|apk|appbundle|web|ios|none] [--fix]
 Prints a PASS / FAIL / NOT RUN table. Exit code 1 if any step FAILs.
+The "docs" step runs docs_gate.py (documentation standard); it needs a git checkout with a base branch for its diff checks.
 """
 import argparse
 import platform
@@ -27,6 +28,16 @@ def run(cmd, cwd):
         return 124, ["timed out after 30 min"]
 
 
+def docs_step(root):
+    """Documentation standard (docs_gate.py, same folder): changelog, feature docs, index."""
+    code, out = run([sys.executable, str(Path(__file__).with_name("docs_gate.py")), str(root)], root)
+    bad = [l.strip() for l in out if " FAIL " in l]
+    notrun = [l.strip() for l in out if " NOT RUN " in l]
+    if code == 0 and notrun:
+        return ("docs", "NOT RUN", " | ".join(notrun[:1]) + " (static checks passed)")
+    return ("docs", "PASS" if code == 0 else "FAIL", " | ".join(bad[:3]) if code else "")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("dir")
@@ -40,6 +51,7 @@ def main():
     if not shutil.which("flutter"):
         for step in ["pub get", "format", "fix", "analyze", "test", "codegen", f"build {a.target}"]:
             results.append((step, "NOT RUN", "Flutter SDK not on PATH"))
+        results.append(docs_step(root))
         return report(results, None)
     _, ver = run(["flutter", "--version"], root)
     flutter_ver = ver[0] if ver else "unknown"
@@ -75,6 +87,8 @@ def main():
         results.append(("codegen", "PASS" if code == 0 else "FAIL", "" if code == 0 else out[-1]))
     else:
         results.append(("codegen", "PASS", "not used"))
+
+    results.append(docs_step(root))
 
     t = a.target
     if t == "none":

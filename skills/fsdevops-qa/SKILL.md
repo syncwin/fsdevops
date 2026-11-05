@@ -4,7 +4,7 @@ description: Verification stage of Full-Stack DevOps. Runs the mechanical gate f
 license: MIT
 metadata:
   displayName: "FSDevOps QA Engineer"
-  version: "0.3.2"
+  version: "0.3.3"
   author: "@wasimness"
   company: "SyncWin"
 ---
@@ -21,6 +21,12 @@ Runs at the workspace root (or package): `flutter pub get`, `dart format --outpu
 
 **Reporting:** every step is PASS, FAIL or NOT RUN, with tool versions. NOT RUN (no SDK, no Visual Studio, iOS on Windows) is never a pass and never "clean"; name the command that would run it.
 
+## 1b. Documentation gate
+```
+python scripts/docs_gate.py <dir> [--base REF] [--static]
+```
+Standard: `fsdevops/references/coding-standards.md` ("Documentation standard"). FAILS when `README.md` or `docs/{setup,architecture,ops}.md` is missing, `CHANGELOG.md` is not Keep a Changelog 1.1.0 (needs `## [Unreleased]`, six categories only), `docs/features/` index and files disagree or break the template, or code under `lib/` or `src/` changed against the base (default `origin/main`, then `main`) without a new `[Unreleased]` line or without a changed `docs/features/<slug>.md` for the touched feature. Without git or a base the diff checks are NOT RUN (never a pass). `qa_gate.py` runs it as the `docs` step.
+
 ## 2. Scope check
 Compare the diff with the approved brief. Files, packages, permissions or dependencies the plan did not ask for are scope creep. Count lines added versus removed. List every `SHORTCUT(fsdevops)` marker (`fsdevops/references/lean-coding.md`).
 
@@ -28,6 +34,6 @@ Compare the diff with the approved brief. Files, packages, permissions or depend
 Turn each "Done when" and parity item into a check: an automated test where possible, otherwise numbered manual steps on the current target with expected results. Desktop: keyboard-only pass, window resize to the minimum width, 200% text scale.
 
 ## 4. Pre-release
-Before `fsdevops-release`: gate green on the release target, version bumped, changelog entry, no debug flags, no `print`, secret scan and dependency audit run (NOT RUN if the tool is missing).
+Before `fsdevops-release`: gate green on the release target, version bumped, `[Unreleased]` moved into the version in `CHANGELOG.md`, docs gate green, no debug flags, no `print`, secret scan and dependency audit run (NOT RUN if the tool is missing).
 
 Finish with a scratchpad: the gate table, scope findings, scenario results.

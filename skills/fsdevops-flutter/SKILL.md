@@ -4,7 +4,7 @@ description: Flutter build skill of Full-Stack DevOps. Creates new Flutter apps 
 license: MIT
 metadata:
   displayName: "FSDevOps Flutter Developer"
-  version: "0.3.2"
+  version: "0.3.3"
   author: "@wasimness"
   company: "SyncWin"
 ---
@@ -15,14 +15,14 @@ Build what the approved PRD says, nothing more (`fsdevops/references/lean-coding
 
 ## New app
 1. Check the toolchain: `flutter --version`, `flutter doctor -v`, `flutter devices`. Missing Windows toolchain → `fsdevops-ci`.
-2. Scaffold with `python scripts/scaffold_app.py <dir> --name <app> --prefix <prefix> [--modules feed,tasks] [--builder-ui]`. It runs `flutter create` for the shell (all platforms, org from the user) and writes the workspace, packages, module registry, router, theme, lints, an ownership file when `--builder-ui` is set, and a first widget test. Review what it wrote; it never overwrites existing files.
+2. Scaffold with `python scripts/scaffold_app.py <dir> --name <app> --prefix <prefix> [--modules feed,tasks] [--builder-ui]`. It runs `flutter create` for the shell (all platforms, org from the user) and writes the workspace, packages, module registry, router, theme, lints, an ownership file when `--builder-ui` is set, and a first widget test. It also writes the documentation standard (`README.md`, `CHANGELOG.md` at 0.0.1, `docs/` setup, architecture, ops, `docs/features/` index and one planned feature file per module; `FILL IN:` markers). Review what it wrote; it never overwrites existing files.
 3. Fill the modules from the PRD: each module package exposes one `AppModule` (`references/architecture.md`).
 4. Run the app on the first target: `flutter run -d windows`.
 5. Hand to `fsdevops-qa`.
 
 ## New feature or module
 1. Detect (`fsdevops-architect`): existing state and routing libraries win, even if they differ from the defaults below. Never introduce a second state or routing library.
-2. Add a module package or feature folder, register it, add routes and tests.
+2. Add a module package or feature folder, register it, add routes and tests, and a feature file plus index row in `docs/features/` (`fsdevops/references/coding-standards.md`). Every code change adds an `[Unreleased]` line and updates its feature file in the same change.
 3. Builder-owned paths: follow `fsdevops/references/ownership.md`.
 
 ## Defaults (when the project has none)

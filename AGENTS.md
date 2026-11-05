@@ -7,6 +7,7 @@ Full-Stack DevOps Claude plugin: app lifecycle (plan, build, update, verify, rev
 ## Commands
 - Detect stack: `python skills/fsdevops-architect/scripts/detect_project.py <app>`
 - QA gate on an app: `python skills/fsdevops-qa/scripts/qa_gate.py <app> [--target windows|apk|appbundle|web|ios|none] [--fix]`
+- Docs gate on an app: `python skills/fsdevops-qa/scripts/docs_gate.py <app> [--base REF] [--static]`
 - Scaffold test: a throwaway `python skills/fsdevops-flutter/scripts/scaffold_app.py` run
 - Add a stack: follow `skills/fsdevops/references/stacks.md`
 - Validate: `claude plugin validate . --strict`

@@ -4,7 +4,7 @@ description: Change stage for existing app code in Full-Stack DevOps. Fixes bugs
 license: MIT
 metadata:
   displayName: "FSDevOps Maintainer"
-  version: "0.3.2"
+  version: "0.3.3"
   author: "@wasimness"
   company: "SyncWin"
 ---
@@ -26,6 +26,6 @@ metadata:
 Flutter/Dart SDK, packages, Riverpod 2→3, go_router majors, Gradle/AGP, Windows runner changes.
 
 ## After
-Gate, scenarios from the parity list, reviewer. Report lines added versus removed.
+Docs in the same change (`fsdevops/references/coding-standards.md`): `[Unreleased]` line, touched feature files, index. Gate, scenarios from the parity list, reviewer. Report lines added versus removed.
 
 Finish with a scratchpad: baseline, changes, parity results, follow-ups.
