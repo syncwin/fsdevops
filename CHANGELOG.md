@@ -4,7 +4,7 @@
 
 ### Added
 - Documentation standard for every app the plugin builds (single source: coding-standards.md): README.md and docs/ (setup, architecture, ops), CHANGELOG.md (Keep a Changelog 1.1.0, SemVer 2.0.0, starts at 0.0.1, [Unreleased] on top, pre-1.0 = beta), and docs/features/ with an index table and a lean feature-file template (status, context, behaviour, how it works, UI, limits, history).
-- fsdevops-qa/scripts/docs_gate.py (stdlib): FAILS when code under lib/ or src/ changed without a CHANGELOG [Unreleased] line, without a changed feature file for the touched feature, or with a stale docs/features index; also checks changelog format and feature-file template. Runs as the docs step of qa_gate.py; NOT RUN without git.
+- fsdevops-qa/scripts/docs_gate.py (stdlib): FAILS (a new [Unreleased] `### Changed` or `docs: none` line waives the feature-file part for refactors) when code under lib/ or src/ changed without a CHANGELOG [Unreleased] line, without a changed feature file for the touched feature, or with a stale docs/features index; also checks changelog format and feature-file template. Runs as the docs step of qa_gate.py; NOT RUN without git.
 - Scaffold writes the standard files (README, CHANGELOG 0.0.1, docs, one planned feature file per module) and sets the app version to 0.0.1.
 
 ### Changed

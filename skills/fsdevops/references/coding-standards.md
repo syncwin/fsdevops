@@ -52,7 +52,7 @@ Text description, no screenshots needed: layout, controls, states.
 ## History
 - X.Y.Z: one-line change
 ```
-- **When code changes** (anything under `lib/` or `src/`): add a line under `## [Unreleased]`; update the feature file of every touched feature (body, `Updated`, a History line) and the index row if Status or Since changed; add file + index row for a new feature. Shared code (core, ui, theme, root files) needs the changelog line only.
+- **When code changes** (anything under `lib/` or `src/`): add a line under `## [Unreleased]`; update the feature file of every touched feature (body, `Updated`, a History line) and the index row if Status or Since changed; add file + index row for a new feature. Shared code (core, ui, theme, root files) needs the changelog line only. Pure refactors skip the feature-file update: a new `### Changed` line or a line containing `docs: none` under `[Unreleased]` waives it (the changelog line is still required).
 - **Release** (`fsdevops-release`): `[Unreleased]` becomes `## [X.Y.Z] - date`, a fresh empty `[Unreleased]` stays on top, `pubspec.yaml` version matches.
 - **Evidence for AI+ contract adoption** (no `contract.yaml` here yet): `changelog_unreleased_updated`, `feature_docs_updated`, `feature_index_current`, `docs_gate_exit_code` = the rows and exit code of `docs_gate.py`.
 

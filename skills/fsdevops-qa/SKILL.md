@@ -25,7 +25,7 @@ Runs at the workspace root (or package): `flutter pub get`, `dart format --outpu
 ```
 python scripts/docs_gate.py <dir> [--base REF] [--static]
 ```
-Standard: `fsdevops/references/coding-standards.md` ("Documentation standard"). FAILS when `README.md` or `docs/{setup,architecture,ops}.md` is missing, `CHANGELOG.md` is not Keep a Changelog 1.1.0 (needs `## [Unreleased]`, six categories only), `docs/features/` index and files disagree or break the template, or code under `lib/` or `src/` changed against the base (default `origin/main`, then `main`) without a new `[Unreleased]` line or without a changed `docs/features/<slug>.md` for the touched feature. Without git or a base the diff checks are NOT RUN (never a pass). `qa_gate.py` runs it as the `docs` step.
+Standard: `fsdevops/references/coding-standards.md` ("Documentation standard"). FAILS when `README.md` or `docs/{setup,architecture,ops}.md` is missing, `CHANGELOG.md` is not Keep a Changelog 1.1.0 (needs `## [Unreleased]`, six categories only), `docs/features/` index and files disagree or break the template, or code under `lib/` or `src/` changed against the base (default `origin/main`, then `main`) without a new `[Unreleased]` line or without a changed `docs/features/<slug>.md` for the touched feature (a new `### Changed` or `docs: none` line under `[Unreleased]` waives the feature-file part for refactors). Without git or a base the diff checks are NOT RUN (never a pass). `qa_gate.py` runs it as the `docs` step.
 
 ## 2. Scope check
 Compare the diff with the approved brief. Files, packages, permissions or dependencies the plan did not ask for are scope creep. Count lines added versus removed. List every `SHORTCUT(fsdevops)` marker (`fsdevops/references/lean-coding.md`).
