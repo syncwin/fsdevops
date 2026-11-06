@@ -10,6 +10,7 @@ Format: date · idea · source
 - 2026-11-04 · Deterministic review: file list from git diff, bundle related files, one narrow check per lens, model only for judgement · Better Stack Short on "Open Code Review"
 - 2026-11-04 · Use Anthropic security-guidance, pr-review-toolkit, code-simplifier, code-review and OWASP code-security-skills when installed (optional, fallback to own skills); trigger deep OWASP audit only for auth, payments, secrets, user input, new deps. Names/features unverified · personal notes
 - 2026-11-04 · AGENTS.md model routing (Opus plans, Haiku/Sonnet execute) as a shipped default · all plugins (Claude plugins note)
+- 2026-11-06 · Warm worktrees: copy git-ignored build caches (node_modules, .dart_tool, build) into new agent worktrees with copy-on-write clones (Worktrunk `wt step copy-ignored`). Windows needs a Dev Drive (ReFS block cloning). Test on lifeos-app first; then add a warm-worktree step · YouTube Short e03gppjLojw
 
 ## Accepted
 - 2026-11-05 · AI+ contract adoption: when the plugin gets a contract.yaml, add evidence signals changelog_unreleased_updated, feature_docs_updated, feature_index_current, docs_gate_exit_code (rows of docs_gate.py) · User (docs standard)
