@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.4.1] - 2026-11-06
+
+### Changed
+- Standing rule: research before building. Check current official docs and widely recommended, secure practice before choosing an approach, file, tool, config or dependency; cite the source; mark anything unverified; never guess; keep research scoped to the task.
+
 ## [0.4.0] - 2026-11-06
 
 ### Added

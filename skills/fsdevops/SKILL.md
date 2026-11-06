@@ -4,7 +4,7 @@ description: Full-Stack DevOps - the entry point and router for the whole app de
 license: MIT
 metadata:
   displayName: "Full-Stack DevOps"
-  version: "0.4.0"
+  version: "0.4.1"
   author: "@wasimness"
   company: "SyncWin"
 ---
@@ -56,7 +56,7 @@ Desktop (Windows) first, then Android, then iOS and web, unless the user says ot
 ## Selection rules
 
 - **One owner per domain** (`references/domain-map.md`).
-- **Official first.** docs.flutter.dev and dart.dev, then role skills, then house rules; house rules may be stricter, never looser (`references/precedence.md`).
+- **Official first, at every stage (research before building).** Before choosing an approach, file, tool, config or dependency, check current official docs and widely recommended, secure practice; cite the source in the docs or brief; mark anything unverified; never guess. Keep research scoped to what the task needs (smallest complete change). Order: docs.flutter.dev and dart.dev, then role skills, then house rules; house rules may be stricter, never looser (`references/precedence.md`).
 - **Ownership file.** If the repo has `.claude/ownership.md`, obey it: paths owned by a visual builder or generator are edited only by its rules (`references/ownership.md`).
 - **Never invent facts about the user's project.** Names, links, versions and credentials not given are left out.
 - This plugin never depends on another plugin and never operates other apps' UIs. If a step needs an app action (a builder's button, a store console), print it as a manual step for the user.

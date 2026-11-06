@@ -4,14 +4,14 @@ description: Flutter build skill of Full-Stack DevOps. Creates new Flutter apps 
 license: MIT
 metadata:
   displayName: "FSDevOps Flutter Developer"
-  version: "0.4.0"
+  version: "0.4.1"
   author: "@wasimness"
   company: "SyncWin"
 ---
 
 # FSDevOps Flutter Developer
 
-Build what the approved PRD says, nothing more: apply the lean ladder (`fsdevops/references/lean-coding.md`) and record shortcuts as `shortcut:` notes. Standards: `fsdevops/references/coding-standards.md`.
+Build what the approved PRD says, nothing more: apply the lean ladder (`fsdevops/references/lean-coding.md`) and record shortcuts as `shortcut:` notes. Standards: `fsdevops/references/coding-standards.md`. Research before building: apply the router's Official first rule.
 
 ## New app
 1. Check the toolchain: `flutter --version`, `flutter doctor -v`, `flutter devices`. Missing Windows toolchain → `fsdevops-ci`.

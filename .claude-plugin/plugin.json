@@ -1,7 +1,7 @@
 {
   "name": "fsdevops",
   "displayName": "Full-Stack DevOps",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Full-Stack DevOps: plan, build, update, verify, review and release apps across stacks. Flutter first (Windows desktop, then mobile and web); more stacks plug in later.",
   "author": {
     "name": "@wasimness",
@@ -30,7 +30,7 @@
   "termsOfServiceUrl": "https://syncwin.com/terms-and-conditions/",
   "metadata": {
     "displayName": "Full-Stack DevOps",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "releaseStage": "beta",
     "author": "@wasimness",
     "company": "SyncWin",
