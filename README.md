@@ -2,6 +2,8 @@
 
 A Claude plugin that takes an app from idea to release: plan, build, update, test, review and ship. **Flutter first** (Windows desktop, then Android, iOS and web). More stacks (React, Next.js and others) plug in later as their own build skills, sharing the same lifecycle.
 
+**Download:** [fsdevops.plugin](https://github.com/syncwin/fsdevops/releases/latest/download/fsdevops.plugin) (always the latest release)
+
 ## What it does
 `/fsdevops` (or just ask to build, fix, test, review or release app code) runs:
 

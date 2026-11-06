@@ -1,5 +1,10 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+- GitHub Actions workflow `release-plugin.yml` builds `fsdevops.plugin` and attaches it to each release for a one-click download link (README).
+
 ## [0.3.3] - 2026-11-05
 
 ### Added
