@@ -1,8 +1,9 @@
 # Changelog
 
-## [Unreleased]
+## [0.3.4] - 2026-11-06
 
 ### Added
+- `skills/fsdevops/references/web-react-stack.md`: planning reference for React + TypeScript web/desktop apps (Tailwind, tokens, TanStack Query, Zustand, react-hook-form + zod, Bun, TurboRepo, WCAG 2.2 AA, licensing); linked from the router. Flutter behaviour unchanged.
 - GitHub Actions workflow `release-plugin.yml` builds `fsdevops.plugin` and attaches it to each release for a one-click download link (README).
 
 ## [0.3.3] - 2026-11-05
