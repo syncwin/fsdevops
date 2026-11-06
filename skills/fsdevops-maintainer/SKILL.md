@@ -4,7 +4,7 @@ description: Change stage for existing app code in Full-Stack DevOps. Fixes bugs
 license: MIT
 metadata:
   displayName: "FSDevOps Maintainer"
-  version: "0.3.3"
+  version: "0.4.0"
   author: "@wasimness"
   company: "SyncWin"
 ---
@@ -17,6 +17,7 @@ metadata:
 3. Write the parity list (behaviour that must stay) into the brief if missing.
 
 ## Changing
+- Apply the lean ladder (`fsdevops/references/lean-coding.md`): list touch points first, fix root causes once in shared code, note shortcuts.
 - Smallest diff that meets the brief; match the surrounding code's style and libraries.
 - A failing test first for bugs, then the fix.
 - No drive-by refactors; list them as follow-ups.

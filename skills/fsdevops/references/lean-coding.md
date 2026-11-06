@@ -1,26 +1,37 @@
-# Lean coding (foundational: write less)
+# Lean coding: the lean ladder (write less, finish everything)
 
-Principle credited in `CREDITS.md` (Ponytail's minimal-code order of operations); wording and rules here are original.
+Method adapted from [Ponytail](https://github.com/dietrichgebert/ponytail) by Dietrich Gebert (MIT); wording and structure here are original. See `CREDITS.md`.
 
-## Decision ladder (stop at the first yes)
-1. **Does the plan require it?** If not, don't write it. Report it as "skipped: X, add when Y".
-2. **Does the project already have it?** Search the repo (widgets, extensions, providers, helpers) and reuse.
-3. **Does Flutter or Dart already provide it?** Material/Cupertino widgets, `ThemeData` component themes, `LayoutBuilder`, `Intl`, `dart:collection`, `Future`/`Stream` utilities. See `flutter-shortcuts.md`.
-4. **Does an already-approved dependency provide it?** Riverpod, go_router, drift, freezed.
-5. **Is a well-maintained package worth it?** Only with the user's OK (`fsdevops-security` licence and health check). One package per need.
-6. **Write the smallest code that works**, with tests for its behaviour.
+Be lazy about the solution, never about completeness: every part the task needs is done.
 
-## Habits
-- One way to do a thing per repo (one state library, one router, one HTTP client, one model generator).
-- No speculative abstractions: no interface with one implementation unless a test or the module registry needs it.
-- No dead parameters, flags or commented-out code.
-- Configuration over code when a setting does the job (`ThemeData` over custom painting; `analysis_options.yaml` over ad-hoc rules).
-- Generated code beats hand-written boilerplate (freezed, json_serializable, riverpod_generator) once three or more models need it; before that, plain classes.
+## 1. Read, then list touch points (before any code)
+- Read the task and the code it touches.
+- List every place the change must reach: callers, tests, fixtures, config, exports, docs, generated files.
+- Ask what could break for users: data loss, exposure, callers that stop working. This list is the scope; extras are not.
 
-## Effort levels
-- **lite**: apply the ladder silently.
-- **full** (default): apply it and list skipped items in the summary.
-- **ultra**: also report lines added versus removed and justify each new file.
+## 2. The ladder (take the first rung that fully works)
+1. **Does it need to exist?** If the plan or request does not require it, skip it and report "skipped: X, add when Y". A vague request gets the smallest version that does the core job.
+2. **Reuse what the project has** (widgets, extensions, providers, helpers), in the surrounding style. Search before writing.
+3. **Dart or Flutter already provides it** (Material/Cupertino widgets, `ThemeData` component themes, `LayoutBuilder`, `Intl`, `dart:collection`). See `flutter-shortcuts.md`.
+4. **An installed dependency provides it** (Riverpod, go_router, drift, freezed). A new package never for a few lines; otherwise only with the user's OK after the `fsdevops-security` licence and health check, one package per need.
+5. **One readable line** beats a helper.
+6. **Minimum working code**, nothing speculative.
 
-## Shortcut marker
-When you deliberately take a shortcut to ship (a deliberate gap with a reason), mark it `// SHORTCUT(fsdevops): <reason>, remove when <condition>`. `fsdevops-qa` lists every marker.
+## 3. Rules while changing
+- One way per repo (one state library, router, HTTP client, model generator). No speculative interface, wrapper, option or flag; no commented-out code. Deleting code beats adding it.
+- Config over code (`ThemeData`, `analysis_options.yaml`). Generated code (freezed, json_serializable, riverpod_generator) once three or more models need it.
+- Bug fix: grep every caller first, then fix the root cause once in the shared code, not at each call site.
+- Moved or merged code keeps its error handling and validation. Between equally short options pick the one that handles edge cases.
+- New non-trivial logic (branches, loops, parsers, money, security) gets one small test. Trivial changes do not.
+
+## 4. Never cut
+Validation at trust boundaries, error handling that prevents data loss, security (`fsdevops-security`), accessibility (`accessibility.md`), and anything the user explicitly asked for.
+
+## 5. Shortcut notes
+A deliberate shortcut with a known limit gets a code comment: `// shortcut: <limit>, upgrade when <condition>`. The reviewer's debt mode collects them.
+
+## 6. Levels and modes
+- **lite**: apply the ladder silently. **full** (default): also list skipped items in the summary. **ultra**: also challenge the request, report lines added versus removed, and justify each new file.
+- **review**: lean lens over a diff or folder. Flag code a higher rung covers, duplicated utilities, one-use abstractions, a second library, root causes patched per caller. Name the rung and the smaller form.
+- **audit**: same lens over the whole repo, ranked by lines saved.
+- **debt**: list every `shortcut:` note with its limit and upgrade trigger; flag ones whose trigger has now been met or that lack a limit.

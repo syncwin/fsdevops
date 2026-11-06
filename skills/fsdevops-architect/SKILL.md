@@ -4,7 +4,7 @@ description: Planning stage of Full-Stack DevOps. Detects the project (stack, wo
 license: MIT
 metadata:
   displayName: "FSDevOps Architect"
-  version: "0.3.3"
+  version: "0.4.0"
   author: "@wasimness"
   company: "SyncWin"
 ---
@@ -26,6 +26,7 @@ Ask only what the user alone knows, at most five questions, with your default fi
 Link the official pages the plan depends on (`fsdevops/references/official-docs.md`); re-fetch any page whose rule decides the design. Mark anything not verified.
 
 ## 4. Write the brief
+- Before planning, read the touched code and list every touch point (callers, tests, fixtures, config, exports, docs, generated files) per the lean ladder (`fsdevops/references/lean-coding.md`); the brief's file list is that list. Plan the first ladder rung that works and name what you skipped.
 - New app or feature: `references/prd-template.md`.
 - Update, DevOps, release: `references/change-brief-template.md`.
 - Name the domains it touches so the router loads only those role skills.

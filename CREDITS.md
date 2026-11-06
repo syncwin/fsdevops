@@ -7,7 +7,7 @@ Full-Stack DevOps is one MIT-licensed package. Every skill, script and reference
 | Flutter and Dart documentation (docs.flutter.dev, dart.dev) | Source of truth for architecture, platforms, standards and release. Linked from `skills/fsdevops/references/official-docs.md`, not copied | See each site |
 | [flutter/agent-plugins](https://github.com/flutter/agent-plugins) | Which Flutter tasks an agent skill set should cover (architecture, routing, responsive layout, tests, localization, JSON) | BSD-3-Clause |
 | [Dart and Flutter MCP server](https://docs.flutter.dev/ai/mcp-server) | Declared in `.mcp.json` and used for analyze, format and tests when present; not bundled | BSD-3-Clause |
-| [dietrichgebert/ponytail](https://github.com/dietrichgebert/ponytail) | The idea of a minimal-code order of operations and reviewing for over-engineering | MIT |
+| [dietrichgebert/ponytail](https://github.com/dietrichgebert/ponytail) | The minimal-code order of operations (the lean ladder in `skills/fsdevops/references/lean-coding.md`, rewritten in our own words) and reviewing for over-engineering | MIT |
 | [Anthropic claude-plugins-official](https://github.com/anthropics/claude-plugins-official) (pr-review-toolkit) | The idea of confidence-scored review that reports only high-certainty findings | Apache-2.0 |
 | Full-Stack WP DevOps (same author) | The lifecycle: router, architect, build, QA gate, independent reviewer, release | MIT |
 

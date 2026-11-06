@@ -4,7 +4,7 @@ description: Full-Stack DevOps - the entry point and router for the whole app de
 license: MIT
 metadata:
   displayName: "Full-Stack DevOps"
-  version: "0.3.3"
+  version: "0.4.0"
   author: "@wasimness"
   company: "SyncWin"
 ---

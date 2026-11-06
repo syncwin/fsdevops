@@ -4,7 +4,7 @@ description: Data role skill of Full-Stack DevOps for Flutter. Builds the API cl
 license: MIT
 metadata:
   displayName: "FSDevOps API Developer"
-  version: "0.3.3"
+  version: "0.4.0"
   author: "@wasimness"
   company: "SyncWin"
 ---
