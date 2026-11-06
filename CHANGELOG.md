@@ -1,15 +1,16 @@
 # Changelog
 
-## [Unreleased]
-
-### Added
-- GitHub Actions workflow `release-plugin.yml` builds `fsdevops.plugin` and attaches it to each release for a one-click download link (README).
-
 ## [0.4.0] - 2026-11-06
 
 ### Added
 - Lean ladder (adapted from Ponytail, MIT): `lean-coding.md` merged and rewritten as read, list touch points, six rungs, never-cut list, `shortcut:` notes, and review, audit and debt modes. Wired into architect, flutter, maintainer and reviewer (new debt lens).
 - Product decisions of 2026-11-06 in `architecture.md`: monorepo per product with `packages/ui` and Widgetbook, Rust only for proven hot spots, Python never in mobile apps, public parts released from the monorepo.
+
+## [0.3.4] - 2026-11-06
+
+### Added
+- `skills/fsdevops/references/web-react-stack.md`: planning reference for React + TypeScript web/desktop apps (Tailwind, tokens, TanStack Query, Zustand, react-hook-form + zod, Bun, TurboRepo, WCAG 2.2 AA, licensing); linked from the router. Flutter behaviour unchanged.
+- GitHub Actions workflow `release-plugin.yml` builds `fsdevops.plugin` and attaches it to each release for a one-click download link (README).
 
 ## [0.3.3] - 2026-11-05
 

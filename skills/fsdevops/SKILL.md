@@ -25,7 +25,7 @@ Run `fsdevops-architect/scripts/detect_project.py <dir>` once (or read the files
 |---|---|---|
 | `pubspec.yaml` with `flutter:` | Flutter | `fsdevops-flutter` |
 | No project yet, user names Flutter or a desktop/mobile app | Flutter (default) | `fsdevops-flutter` |
-| `package.json`, `go.mod`, others | Not supported yet | Say so; offer a plan only |
+| `package.json`, `go.mod`, others | Not supported yet | Say so; offer a plan only (web or desktop React + TypeScript plans use `references/web-react-stack.md`) |
 
 ## Step 1: Classify the work
 
@@ -87,6 +87,7 @@ Keep replies short: lead with the result, list decisions and open items only. Lo
 | File | Read it for |
 |---|---|
 | `references/stacks.md` | Stack detection and how a new stack is added |
+| `references/web-react-stack.md` | Stack choices for React + TypeScript web/desktop plans (not Flutter) |
 | `references/work-types.md` | What each work type changes |
 | `references/domain-map.md` | Which skill owns which domain |
 | `references/precedence.md` | Official docs vs. role skills vs. house rules |
