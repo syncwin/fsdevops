@@ -4,14 +4,14 @@ description: Flutter build skill of Full-Stack DevOps. Creates new Flutter apps 
 license: MIT
 metadata:
   displayName: "FSDevOps Flutter Developer"
-  version: "0.3.4"
+  version: "0.4.0"
   author: "@wasimness"
   company: "SyncWin"
 ---
 
 # FSDevOps Flutter Developer
 
-Build what the approved PRD says, nothing more (`fsdevops/references/lean-coding.md`). Standards: `fsdevops/references/coding-standards.md`.
+Build what the approved PRD says, nothing more: apply the lean ladder (`fsdevops/references/lean-coding.md`) and record shortcuts as `shortcut:` notes. Standards: `fsdevops/references/coding-standards.md`.
 
 ## New app
 1. Check the toolchain: `flutter --version`, `flutter doctor -v`, `flutter devices`. Missing Windows toolchain → `fsdevops-ci`.
@@ -21,6 +21,7 @@ Build what the approved PRD says, nothing more (`fsdevops/references/lean-coding
 5. Hand to `fsdevops-qa`.
 
 ## New feature or module
+0. Check `packages/ui` (and its Widgetbook catalog) before building any widget.
 1. Detect (`fsdevops-architect`): existing state and routing libraries win, even if they differ from the defaults below. Never introduce a second state or routing library.
 2. Add a module package or feature folder, register it, add routes and tests, and a feature file plus index row in `docs/features/` (`fsdevops/references/coding-standards.md`). Every code change adds an `[Unreleased]` line and updates its feature file in the same change.
 3. Builder-owned paths: follow `fsdevops/references/ownership.md`.

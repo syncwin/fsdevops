@@ -4,7 +4,7 @@ description: Release stage of Full-Stack DevOps. Versions, changelogs, builds an
 license: MIT
 metadata:
   displayName: "FSDevOps Release Manager"
-  version: "0.3.4"
+  version: "0.4.0"
   author: "@wasimness"
   company: "SyncWin"
 ---

@@ -40,3 +40,9 @@ abstract class AppModule {
 
 ## Errors and logging
 Repositories return values or throw typed exceptions; providers expose `AsyncValue`; screens render loading, error (with retry) and empty states. One logger in core.
+
+## Product decisions (user, 2026-11-06)
+- One monorepo per product with shared packages: Flutter pub workspace with `apps/`, `packages/ui` (design system with a Widgetbook catalog; check it before building any widget) and `packages/core`.
+- Rust via `flutter_rust_bridge` only for proven hot spots (crypto, sync, search, files); measure first.
+- Python only for desktop or server helpers, never inside mobile apps.
+- Public parts are published from the monorepo by a release workflow, not by separate source repos.

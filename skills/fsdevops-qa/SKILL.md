@@ -4,7 +4,7 @@ description: Verification stage of Full-Stack DevOps. Runs the mechanical gate f
 license: MIT
 metadata:
   displayName: "FSDevOps QA Engineer"
-  version: "0.3.4"
+  version: "0.4.0"
   author: "@wasimness"
   company: "SyncWin"
 ---
