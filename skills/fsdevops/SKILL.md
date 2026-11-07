@@ -1,10 +1,10 @@
 ---
 name: fsdevops
-description: Full-Stack DevOps - the entry point and router for the whole app development lifecycle, Flutter first (Windows desktop, then Android, iOS and web). Use whenever the user wants to build a new app or module, add a feature, fix, refactor or upgrade existing app code, write tests, set up CI, or review, secure, optimize, package or release an app, including any code review of a Dart or Flutter project (security issues, over-engineering, quality); also when they invoke /fsdevops. Detects the stack and work type, then sequences fsdevops-architect, a build skill (fsdevops-flutter, fsdevops-maintainer), fsdevops-qa and fsdevops-reviewer, backed by role skills for UI, API, security, performance, devops and release, on top of the always-applied lean-coding and coding-standards references this skill owns. Not for WordPress (that is fswpdevops) and not for operating an app's own UI such as clicking through a visual builder (that is an app-operator plugin).
+description: Full-Stack DevOps - the entry point and router for the whole app development lifecycle, Flutter first (Windows desktop, then Android, iOS and web). Use whenever the user wants to build a new app or module, add a feature, fix, refactor or upgrade existing app code, write tests, set up CI, or review, secure, optimize, package or release an app, including any code review of a Dart or Flutter project (security issues, over-engineering, quality); also when they invoke /fsdevops. Detects the stack and work type, then sequences fsdevops-architect, a build skill (fsdevops-flutter, fsdevops-maintainer), fsdevops-qa, fsdevops-critic (UI work) and fsdevops-reviewer, backed by role skills for UI, API, security, performance, devops and release, on top of the always-applied lean-coding and coding-standards references this skill owns. Not for WordPress (that is fswpdevops) and not for operating an app's own UI such as clicking through a visual builder (that is an app-operator plugin).
 license: MIT
 metadata:
   displayName: "Full-Stack DevOps"
-  version: "0.4.1"
+  version: "0.5.0"
   author: "@wasimness"
   company: "SyncWin"
 ---
@@ -45,9 +45,10 @@ Unclear or mixed? Ask one question. Details: `references/work-types.md`.
 1. **`fsdevops-architect`**: triage, one question round, research, PRD or change brief, the single approval gate.
 2. **Build skill** from the table. `references/lean-coding.md`, `references/coding-standards.md` and `fsdevops-security` always apply. Load other role skills only for the domains the plan lists (`references/domain-map.md`).
 3. **`fsdevops-qa`**: mechanical gate (format, fix, analyze, test, build), scenarios, scope check. Every result is PASS, FAIL or NOT RUN; NOT RUN is never a pass.
-4. **`fsdevops-reviewer`**: independent read-only review. In Claude Code delegate to the `fsdevops-code-reviewer` agent; without agents, run a separate pass and disclose it as a self-review.
-5. **Fix loop**: fix every Critical and Important finding, re-run steps 3 and 4 on changed files only.
-6. **Ship**: `fsdevops-release` when the target is a build or release; otherwise deliver the diff with a short summary.
+4. **`fsdevops-critic`** (only when the change has UI): read-only design and UX critique after the build, before the reviewer; structured findings with severity, evidence and fix, one-line verdict. Builders fix what it finds.
+5. **`fsdevops-reviewer`**: independent read-only review. In Claude Code delegate to the `fsdevops-code-reviewer` agent; without agents, run a separate pass and disclose it as a self-review.
+6. **Fix loop**: fix every Critical and Important finding, re-run steps 3 to 5 on changed files only.
+7. **Ship**: `fsdevops-release` when the target is a build or release; otherwise deliver the diff with a short summary.
 
 ## Platform order
 
@@ -78,7 +79,7 @@ Keep replies short: lead with the result, list decisions and open items only. Lo
 ## Stable contract
 
 - Plugin slug and router skill: `fsdevops`. Trigger `/fsdevops`.
-- Skills: `fsdevops-architect`, `fsdevops-flutter`, `fsdevops-maintainer`, `fsdevops-ui`, `fsdevops-api`, `fsdevops-security`, `fsdevops-performance`, `fsdevops-qa`, `fsdevops-reviewer`, `fsdevops-ci`, `fsdevops-release`; agent `fsdevops-code-reviewer`.
+- Skills: `fsdevops-architect`, `fsdevops-flutter`, `fsdevops-maintainer`, `fsdevops-designer`, `fsdevops-critic`, `fsdevops-api`, `fsdevops-security`, `fsdevops-performance`, `fsdevops-qa`, `fsdevops-reviewer`, `fsdevops-ci`, `fsdevops-release`; agent `fsdevops-code-reviewer`.
 - A future stack adds `fsdevops-<stack>` plus stack references; the lifecycle skills stay shared.
 - Result vocabulary: PASS, FAIL, NOT RUN.
 

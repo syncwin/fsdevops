@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.5.0] - 2026-11-07
+
+### Added
+- `fsdevops-critic`: read-only design and UX critique stage (UX heuristics, flow, hierarchy, consistency, states, a11y, copy) with severity, evidence, fix, confidence >= 80 and a one-line verdict; runs after the build and before the reviewer. Rubric in `references/ux-rubric.md`.
+- `fsdevops-designer` guidance: designer workflow, reuse ladder (`packages/ui` first), tokens, states table, Widgetbook use-cases, visual QA evidence (`references/design-system.md`, `references/visual-qa.md`).
+- Trigger evals for both skills.
+
+### Changed
+- Renamed skill `fsdevops-ui` to `fsdevops-designer`; all existing content kept, cross-references updated in the router, flutter skill, domain map and prompts.
+
 ## [0.4.1] - 2026-11-06
 
 ### Changed

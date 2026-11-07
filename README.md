@@ -10,10 +10,11 @@ A Claude plugin that takes an app from idea to release: plan, build, update, tes
 1. **Architect**: detects the project, asks up to five questions, writes a PRD or change brief, gets one approval.
 2. **Build**: `fsdevops-flutter` for new apps and modules (pub workspace, module registry with runtime on/off, Riverpod 3, go_router, Material 3 tokens), `fsdevops-maintainer` for changes.
 3. **QA gate**: format, fix, analyze, test, codegen and a release build, reported as PASS / FAIL / NOT RUN.
-4. **Independent review** by a read-only agent, one lens per pass.
-5. **Release**: versions, changelog, Windows / Android / iOS / web packaging.
+4. **Critique** (UI work): `fsdevops-critic`, a read-only design and UX pass with severity, evidence and fix.
+5. **Independent review** by a read-only agent, one lens per pass.
+6. **Release**: versions, changelog, Windows / Android / iOS / web packaging.
 
-Role skills: UI, API and offline data, security, performance, devops, release. Always applied: write less (lean coding), coding standards, i18n, accessibility.
+Role skills: designer (UI/UX), API and offline data, security, performance, devops, release. Always applied: write less (lean coding), coding standards, i18n, accessibility.
 
 ## Requirements
 - Flutter SDK on PATH (Dart 3.9+ for the Dart MCP server). Windows desktop builds need Visual Studio with "Desktop development with C++".

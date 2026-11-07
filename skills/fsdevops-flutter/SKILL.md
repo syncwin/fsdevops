@@ -4,7 +4,7 @@ description: Flutter build skill of Full-Stack DevOps. Creates new Flutter apps 
 license: MIT
 metadata:
   displayName: "FSDevOps Flutter Developer"
-  version: "0.4.1"
+  version: "0.5.0"
   author: "@wasimness"
   company: "SyncWin"
 ---
@@ -33,7 +33,7 @@ Build what the approved PRD says, nothing more: apply the lean ladder (`fsdevops
 | State and DI | Riverpod 3 (`flutter_riverpod`), codegen optional | `references/state-and-routing.md` |
 | Routing | go_router, `StatefulShellRoute` for main sections | `references/state-and-routing.md` |
 | Theme | Material 3, `ColorScheme.fromSeed`, `ThemeExtension` tokens | `references/theming.md` |
-| Layout | Window size classes: compact <600, medium <840, expanded >=840 | `fsdevops-ui` |
+| Layout | Window size classes: compact <600, medium <840, expanded >=840 | `fsdevops-designer` |
 | Data | Repositories; API and offline per `fsdevops-api` | `fsdevops-api` |
 | Platforms | Windows first | `references/platforms.md` |
 
