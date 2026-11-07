@@ -4,7 +4,7 @@ description: Independent review stage of Full-Stack DevOps. Reviews finished app
 license: MIT
 metadata:
   displayName: "FSDevOps Reviewer"
-  version: "0.4.1"
+  version: "0.5.0"
   author: "@wasimness"
   company: "SyncWin"
 ---
