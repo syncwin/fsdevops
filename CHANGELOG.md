@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.6.1] - 2026-11-13
+
+### Changed
+- Model-run eval cases (with their `scaffold.sh` fixtures) moved from `adapters/claude/evals/` to `dev/evals/`, so the shipped plugin holds no scripts. Router cases and `evals.json` stay in the plugin.
+
 ## [0.6.0] - 2026-11-13
 
 ### Changed
