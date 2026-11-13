@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.6.0] - 2026-11-13
+
+### Changed
+- Single `main` branch layout for the Anthropic plugin directory: the shipped plugin moved to `adapters/claude/` (`.claude-plugin/plugin.json`, `skills/`, `agents/`, `prompts/`, `.mcp.json`, README, CHANGELOG, LICENSE); the root `.claude-plugin/marketplace.json` points to it (`source: ./adapters/claude`). `icon.png` and `icon.svg` moved to `docs/assets/`.
+- Renamed skills and agent to the directory naming standard (action-style, `fsdevops-` prefix): `fsdevops-architect` to `fsdevops-plan`, `fsdevops-flutter` to `fsdevops-flutter-build`, `fsdevops-maintainer` to `fsdevops-maintain`, `fsdevops-reviewer` to `fsdevops-review`; agent `fsdevops-code-reviewer` to `fsdevops-code-review`. All references, evals and docs updated.
+- Skill and agent frontmatter is text only (`name`, `description`, plus the agent's `tools` and `skills`); the `license` and `metadata` maps were removed. The plugin version lives in `plugin.json` and `marketplace.json`.
+- Router `fsdevops` has a routing table (`Order | Trigger phrases | Skill | Then`, first match wins), tie-break rules, a default closed question and Skill-tool loading as `fsdevops:<skill>`; router cases in `adapters/claude/evals/router/cases.json`. Trigger evals moved from the root `evals/` to `adapters/claude/evals/`.
+- Release workflow zips `adapters/claude` and refuses hooks, scripts and non-text files.
+
+### Removed
+- Hooks, scripts and other non-text files from the shipped plugin. The Python tools and the old formatting hook moved unchanged to `dev/` (maintainer tooling, not shipped).
+
+### Added
+- Markdown recipes replacing the scripts and the hook: `fsdevops-plan/references/detect_project.md`, `fsdevops-flutter-build/references/scaffold_app.md`, `fsdevops-qa/references/qa_gate.md`, `docs_gate.md` and `format_dart.md` (a required "format changed Dart files" step in `fsdevops-qa`, `fsdevops-flutter-build` and `fsdevops-maintain`).
+- `PUBLIC-SAFETY.md`, `.public-safety-allow` and the public-safety `.gitignore` preset.
+
 ## [0.5.0] - 2026-11-07
 
 ### Added

@@ -2,7 +2,7 @@
 
 ## Reporting a vulnerability in this plugin
 
-The package contains instructions and helper scripts (`detect_project.py`, `scaffold_app.py`, `qa_gate.py`, `format_dart.py`). If you find a flaw in one of them, or guidance that would steer generated code toward an insecure pattern, email **support@syncwin.com** with the subject "Security". Include the file, what you saw, and how to reproduce it. Please do not open a public issue first. Expect an acknowledgement, then a fix and a CHANGELOG entry.
+The package is text only: instructions and recipes that tell Claude which commands to run (project detection, scaffold, QA and docs gates, Dart formatting). The matching Python tools in `dev/` are maintainer tooling and are not shipped. If you find a flaw in a recipe, or guidance that would steer generated code toward an insecure pattern, email **support@syncwin.com** with the subject "Security". Include the file, what you saw, and how to reproduce it. Please do not open a public issue first. Expect an acknowledgement, then a fix and a CHANGELOG entry.
 
 ## Vulnerabilities in Flutter or Dart
 

@@ -13,7 +13,7 @@ Over-building is the commonest waste in agent-written code. The plugin needed on
 - Modes: review, audit, debt.
 
 ## How it works
-Single source: `skills/fsdevops/references/lean-coding.md`. Used by `fsdevops-architect` (touch points), `fsdevops-flutter` and `fsdevops-maintainer` (apply), `fsdevops-reviewer` (lean and debt lenses).
+Single source: `skills/fsdevops/references/lean-coding.md`. Used by `fsdevops-plan` (touch points), `fsdevops-flutter-build` and `fsdevops-maintain` (apply), `fsdevops-review` (lean and debt lenses).
 
 ## Limits
 Guidance for the model; no script enforces it.
