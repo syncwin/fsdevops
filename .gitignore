@@ -35,3 +35,6 @@ progress*.md
 .netrc
 private/
 # --- end public-safety preset ---
+
+# Claude Code worktrees
+.claude/worktrees/
