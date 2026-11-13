@@ -1,0 +1,113 @@
+{
+  "_note": "Router cases: expected = the skill the routing table in skills/fsdevops/SKILL.md must pick, or 'ask' for the closed question. Checked by route_check.py.",
+  "cases": [
+    {
+      "prompt": "critique the settings and home screens of my Flutter app",
+      "expected": "fsdevops-critic"
+    },
+    {
+      "prompt": "is the visual hierarchy of this screen consistent with the rest of the app",
+      "expected": "fsdevops-critic"
+    },
+    {
+      "prompt": "review lib/ for security issues",
+      "expected": "fsdevops-review"
+    },
+    {
+      "prompt": "is this code over-engineered",
+      "expected": "fsdevops-review"
+    },
+    {
+      "prompt": "package my Flutter app for Windows",
+      "expected": "fsdevops-release"
+    },
+    {
+      "prompt": "bump the version and publish to the Play Store",
+      "expected": "fsdevops-release"
+    },
+    {
+      "prompt": "flutter doctor says Visual Studio is missing",
+      "expected": "fsdevops-ci"
+    },
+    {
+      "prompt": "set up GitHub Actions for this Flutter repo",
+      "expected": "fsdevops-ci"
+    },
+    {
+      "prompt": "my list screen has jank when scrolling",
+      "expected": "fsdevops-performance"
+    },
+    {
+      "prompt": "reduce the startup time and app size",
+      "expected": "fsdevops-performance"
+    },
+    {
+      "prompt": "fix the spacing on the home screen so it looks better",
+      "expected": "fsdevops-design"
+    },
+    {
+      "prompt": "which design tokens should my app have",
+      "expected": "fsdevops-design"
+    },
+    {
+      "prompt": "plan a Flutter app with switchable modules",
+      "expected": "fsdevops-plan"
+    },
+    {
+      "prompt": "what would it take to move this app from Provider to Riverpod",
+      "expected": "fsdevops-plan"
+    },
+    {
+      "prompt": "there is a null error when I open the settings screen, can you fix it",
+      "expected": "fsdevops-maintain"
+    },
+    {
+      "prompt": "upgrade Flutter and my packages to the latest versions",
+      "expected": "fsdevops-maintain"
+    },
+    {
+      "prompt": "generate the API client from this OpenAPI spec",
+      "expected": "fsdevops-api"
+    },
+    {
+      "prompt": "make the notes list work offline with a local database and an endpoint sync",
+      "expected": "fsdevops-api"
+    },
+    {
+      "prompt": "where should I keep secrets and tokens in my app",
+      "expected": "fsdevops-security"
+    },
+    {
+      "prompt": "check the encryption and permissions my app uses",
+      "expected": "fsdevops-security"
+    },
+    {
+      "prompt": "build me a small Windows desktop app to track habits",
+      "expected": "fsdevops-flutter-build"
+    },
+    {
+      "prompt": "scaffold the approved app with feed and tasks modules",
+      "expected": "fsdevops-flutter-build"
+    },
+    {
+      "prompt": "run the gate on my project",
+      "expected": "fsdevops-qa"
+    },
+    {
+      "prompt": "write tests and check test coverage",
+      "expected": "fsdevops-qa"
+    },
+    {
+      "prompt": "help me with my app",
+      "expected": "ask"
+    },
+    {
+      "prompt": "make my project better",
+      "expected": "ask"
+    },
+    {
+      "prompt": "I need this finished properly this week",
+      "expected": "ask"
+    }
+  ]
+}

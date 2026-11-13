@@ -2,16 +2,16 @@
 
 Full-Stack DevOps Claude plugin: app lifecycle (plan, build, update, verify, review, release), Flutter first.
 
-**Structure:** `skills/fsdevops*` (router + 11 role skills), `agents/fsdevops-code-reviewer.md`, `hooks/hooks.json`, `scripts/format_dart.py`, `evals/`, `docs/`, `prompts/`.
+**Structure:** `adapters/claude/` is the shipped plugin (text only: `.claude-plugin/plugin.json`, `.mcp.json`, `skills/fsdevops*` router + 12 skills with recipes in `references/`, `agents/fsdevops-code-review.md`, `evals/` (trigger evals and `router/cases.json`), `prompts/`, README, CHANGELOG, LICENSE); `dev/` holds maintainer-only Python and the old hook (never shipped); `docs/`, `.claude-plugin/marketplace.json` (source `./adapters/claude`). `main` is the only branch.
 
 ## Commands
-- Detect stack: `python skills/fsdevops-architect/scripts/detect_project.py <app>`
-- QA gate on an app: `python skills/fsdevops-qa/scripts/qa_gate.py <app> [--target windows|apk|appbundle|web|ios|none] [--fix]`
-- Docs gate on an app: `python skills/fsdevops-qa/scripts/docs_gate.py <app> [--base REF] [--static]`
-- Scaffold test: a throwaway `python skills/fsdevops-flutter/scripts/scaffold_app.py` run
-- Add a stack: follow `skills/fsdevops/references/stacks.md`
+- Strict validation (must pass): `python <aiaddon>/dev/aiaddon-review/scripts/validate_extension.py adapters/claude --strict --target directory --require-meta author,company`
+- Router check: `python <aiaddon>/dev/aiaddon-review/scripts/route_check.py adapters/claude`
+- Secret and private-data scan: `python <aiaddon>/dev/aiaddon-review/scripts/scan_secrets.py . --history`; false positives only in `.public-safety-allow`
+- Recipes (what the old scripts did) live in `adapters/claude/skills/*/references/`: `detect_project.md`, `scaffold_app.md`, `qa_gate.md`, `docs_gate.md`, `format_dart.md`. The Python originals stay in `dev/` as maintainer tooling: `python dev/fsdevops-plan/scripts/detect_project.py <app>`, `python dev/fsdevops-qa/scripts/qa_gate.py <app> [--target ...] [--fix]`, `python dev/fsdevops-qa/scripts/docs_gate.py <app>`, `python dev/fsdevops-flutter-build/scripts/scaffold_app.py` (throwaway run). Keep recipe and script behaviour in step.
+- Add a stack: follow `adapters/claude/skills/fsdevops/references/stacks.md`
 - Validate: `claude plugin validate . --strict`
-- Evals (real model calls): `claude plugin eval . --trust-plugin --ablation none --scaffold --allow-tools Read Glob Grep Skill -j 4 --no-publish`. Rebuild cases with `python A:\Automation\plugin-evals\regen_evals.py <plugin> <router> <fixture ids>`. Write results outside the repo (`D:\SyncWin\AI Outputs\<plugin>\eval-results`); the packager includes repo files.
+- Evals (real model calls): `claude plugin eval adapters/claude --trust-plugin --ablation none --scaffold --allow-tools Read Glob Grep Skill -j 4 --no-publish`. Rebuild cases with `python <owner-tools>/plugin-evals/regen_evals.py <plugin> <router> <fixture ids>`. Write results outside the repo (`<owner-outputs>/<plugin>/eval-results`, a local folder outside the repo); the packager includes repo files.
 
 ## Workflow
 1. Read the skill or script you change, plus its neighbours.
@@ -19,13 +19,16 @@ Full-Stack DevOps Claude plugin: app lifecycle (plan, build, update, verify, rev
 3. Update `CHANGELOG.md` for behavior changes; log ideas in `IMPROVEMENTS.md`.
 
 ## Rules
+- **Directory compliance:** the shipped plugin (`adapters/claude`) has no hooks, no scripts or other non-text files, and text-only frontmatter (`name`, `description`). Features that were scripts or hooks are recipes in `skills/*/references/`; Python in `dev/` is maintainer tooling only.
+- **Never publish secrets or private data** (keys, tokens, passwords, personal contact data, client names, internal URLs, local paths); the secret scan blocks every commit and release.
+- Naming standard (validator `P019` to `P023`): router skill name == plugin name; every other skill, agent and command is prefixed `fsdevops-`; action-style slugs (`-review`, not `-reviewer`). Router standard (`P024` to `P028`): routing table, tie-breaks, default question, Skill-tool loading, router evals.
 - Run the closest check and the full gate before committing. Never delete or weaken tests or evals. Report failed, skipped or timed-out runs honestly; NOT RUN is never a pass.
 - Follow neighbouring files. Keep each `SKILL.md` under 500 lines; move detail into `references/`.
-- On release, bump `version` in `.claude-plugin/plugin.json` and every skill's `metadata.version` together; add a `CHANGELOG.md` entry per behavior change.
+- On release, bump `version` in `adapters/claude/.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json` together (skills carry no `metadata` block: directory policy wants text-only frontmatter); add a `CHANGELOG.md` entry per behavior change and copy it to `adapters/claude/CHANGELOG.md`.
 - No commits, pushes or PRs unless asked. Work on a branch and open a PR; never push to main.
 - No new dependencies without asking (scripts stay on the Python standard library).
 - Never commit secrets. Never pick names or slugs without user confirmation.
-- Skill and plugin names start with `fsdevops`. Lean and coding rules live once in `skills/fsdevops/references/` (`lean-coding.md`, `coding-standards.md`).
+- Skill and plugin names start with `fsdevops`. Lean and coding rules live once in `adapters/claude/skills/fsdevops/references/` (`lean-coding.md`, `coding-standards.md`).
 
 ## Model routing
 Opus plans, decides, writes self-contained briefs with a report word limit, and reviews every result. Haiku for search, reading and mechanical edits. Sonnet for coding, tests and multi-step work. Do 1-2 tool calls inline.
