@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.6.1] - 2026-11-13
+
+### Changed
+- Model-run eval cases moved out of the shipped plugin (to the repo's `dev/evals/`); the plugin now holds no scripts.
+
 ## [0.6.0] - 2026-11-13
 
 ### Changed
