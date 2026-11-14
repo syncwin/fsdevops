@@ -12,7 +12,7 @@
       "name": "fsdevops",
       "displayName": "Full-Stack DevOps",
       "source": "./adapters/claude",
-      "version": "0.6.1",
+      "version": "0.6.2",
       "description": "Build, update, test, review and release apps with a mechanical QA gate and an independent reviewer. Flutter first: Windows desktop, then Android, iOS and web.",
       "author": {
         "name": "@wasimness",

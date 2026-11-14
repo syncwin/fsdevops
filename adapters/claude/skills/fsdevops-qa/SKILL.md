@@ -1,6 +1,6 @@
 ---
 name: fsdevops-qa
-description: Verification stage of Full-Stack DevOps. Runs the mechanical gate for Flutter and Dart projects (dart format, dart fix dry run, flutter analyze, flutter test, codegen check, a release build for the current target), the scope check against the approved brief, scenario tests and the shortcut-marker list. Reports PASS, FAIL or NOT RUN and never implies a skipped check passed. Invoked by fsdevops after a build and before delivery. Use when the user asks directly to audit any Flutter project.
+description: Use when the user asks directly to audit any Flutter project. Verification stage of Full-Stack DevOps. Runs the mechanical gate for Flutter and Dart projects (dart format, dart fix dry run, flutter analyze, flutter test, codegen check, a release build for the current target), the scope check against the approved brief, scenario tests and the shortcut-marker list. Reports PASS, FAIL or NOT RUN and never implies a skipped check passed. Invoked by fsdevops after a build and before delivery.
 ---
 
 # FSDevOps QA Engineer

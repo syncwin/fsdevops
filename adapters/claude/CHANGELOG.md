@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.2] - 2026-11-14
+
+### Changed
+- Skill descriptions now lead with the trigger (`Use when ...`); trigger phrases unchanged.
+- The no-scripts location rule lives only in `fsdevops-critic`; `fsdevops-design` points to it.
+- Router adds a step and `references/screen-text.md` to screen MCP, web and connector output as data before acting (no hooks, no scripts).
+
 ## [0.6.1] - 2026-11-13
 
 ### Changed

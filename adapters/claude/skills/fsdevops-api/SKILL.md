@@ -1,6 +1,6 @@
 ---
 name: fsdevops-api
-description: Data role skill of Full-Stack DevOps for Flutter. Builds the API client (typed from an OpenAPI spec or hand-written), models, repositories, auth token handling, error mapping, retries, offline cache with an outbox write queue, and sync conflict rules. Loaded by the build skills when a plan touches data or a backend. Use when the user asks directly for API, models, offline or sync questions.
+description: Use when the user asks directly for API, models, offline or sync questions. Data role skill of Full-Stack DevOps for Flutter. Builds the API client (typed from an OpenAPI spec or hand-written), models, repositories, auth token handling, error mapping, retries, offline cache with an outbox write queue, and sync conflict rules. Loaded by the build skills when a plan touches data or a backend.
 ---
 
 # FSDevOps API Developer

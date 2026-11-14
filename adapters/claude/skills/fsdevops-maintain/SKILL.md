@@ -1,6 +1,6 @@
 ---
 name: fsdevops-maintain
-description: Change stage for existing app code in Full-Stack DevOps. Fixes bugs, refactors, upgrades Flutter, Dart and packages, and migrates state, routing or data layers without breaking behaviour, respecting paths owned by visual builders or code generators. Covers reading before changing, parity lists, small diffs, migrations and rollback. Invoked by fsdevops after an approved change brief. Use when the user asks directly for safe-change or upgrade questions.
+description: Use when the user asks directly for safe-change or upgrade questions. Change stage for existing app code in Full-Stack DevOps. Fixes bugs, refactors, upgrades Flutter, Dart and packages, and migrates state, routing or data layers without breaking behaviour, respecting paths owned by visual builders or code generators. Covers reading before changing, parity lists, small diffs, migrations and rollback. Invoked by fsdevops after an approved change brief.
 ---
 
 # FSDevOps Maintainer

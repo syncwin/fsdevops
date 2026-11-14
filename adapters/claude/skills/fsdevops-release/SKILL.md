@@ -1,6 +1,6 @@
 ---
 name: fsdevops-release
-description: Release stage of Full-Stack DevOps. Versions, changelogs, builds and packages apps for each target - Windows (release folder, MSIX, installer, Microsoft Store), Android (APK, App Bundle, Play internal testing, F-Droid), iOS (TestFlight via a Mac or cloud build) and web (static hosting) - with signing handled only through the user's own keys. Invoked by fsdevops at the ship step. Use when the user asks directly for packaging or publishing questions.
+description: Use when the user asks directly for packaging or publishing questions. Release stage of Full-Stack DevOps. Versions, changelogs, builds and packages apps for each target - Windows (release folder, MSIX, installer, Microsoft Store), Android (APK, App Bundle, Play internal testing, F-Droid), iOS (TestFlight via a Mac or cloud build) and web (static hosting) - with signing handled only through the user's own keys. Invoked by fsdevops at the ship step.
 ---
 
 # FSDevOps Release Manager

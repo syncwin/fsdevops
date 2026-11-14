@@ -1,6 +1,6 @@
 ---
 name: fsdevops-critic
-description: Critique stage of Full-Stack DevOps. A read-only design and UX critique of finished Flutter UI after the build and before the fsdevops-review pass. Judges against the approved brief through UX heuristics, task flow, visual hierarchy, consistency, states, accessibility and UI copy, with screenshots or code as evidence. Reports structured findings with severity, evidence and fix, only at confidence 80 or higher, and ends with a one-line verdict. Never edits. Use when the user asks for a UX critique, a design review, "does this screen feel right" or a visual hierarchy or consistency check of an app they built.
+description: Use when the user asks for a UX critique, a design review, "does this screen feel right" or a visual hierarchy or consistency check of an app they built. Critique stage of Full-Stack DevOps. A read-only design and UX critique of finished Flutter UI after the build and before the fsdevops-review pass. Judges against the approved brief through UX heuristics, task flow, visual hierarchy, consistency, states, accessibility and UI copy, with screenshots or code as evidence. Reports structured findings with severity, evidence and fix, only at confidence 80 or higher, and ends with a one-line verdict. Never edits.
 ---
 
 # FSDevOps Critic

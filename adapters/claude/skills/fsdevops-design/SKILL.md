@@ -1,6 +1,6 @@
 ---
 name: fsdevops-design
-description: UI role skill of Full-Stack DevOps for Flutter. Builds widgets and screens, adaptive layouts across desktop, tablet, phone and web (window size classes, NavigationRail and NavigationBar, keyboard and mouse on desktop), feed and list UIs with mixed card types and swipe actions, loading, empty and error states, and design tokens in code. Loaded by the build skills when a plan touches UI. Use when the user asks directly for layout, widget or feed-UI questions. Also acts as the UI/UX designer of a change: reuses packages/ui and the Widgetbook catalog first, keeps design tokens in one place, designs every state, applies accessibility rules, and gathers visual evidence (screenshots per size class, light and dark, 200% text).
+description: Use when the user asks directly for layout, widget or feed-UI questions. UI role skill of Full-Stack DevOps for Flutter. Builds widgets and screens, adaptive layouts across desktop, tablet, phone and web (window size classes, NavigationRail and NavigationBar, keyboard and mouse on desktop), feed and list UIs with mixed card types and swipe actions, loading, empty and error states, and design tokens in code. Loaded by the build skills when a plan touches UI. Also acts as the UI/UX designer of a change: reuses packages/ui and the Widgetbook catalog first, keeps design tokens in one place, designs every state, applies accessibility rules, and gathers visual evidence (screenshots per size class, light and dark, 200% text).
 ---
 
 # FSDevOps UI Developer
@@ -45,4 +45,4 @@ When a visual builder owns the UI package, widgets there take plain values and c
 
 Finish with a scratchpad: widgets added, layouts checked per size class, open items.
 
-Scripts, if any are added later, run from `./tools/` of the project, never from a path under the home `.claude` folder.
+Script location: see `fsdevops-critic`.
