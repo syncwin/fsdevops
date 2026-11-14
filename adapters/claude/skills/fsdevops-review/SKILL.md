@@ -1,6 +1,6 @@
 ---
 name: fsdevops-review
-description: Independent review stage of Full-Stack DevOps. Reviews finished app code read-only through one lens per pass - security, quality, lean (over-engineering, judged by the lean ladder), debt (shortcut notes), accessibility or performance - reporting only findings with confidence 80 or higher in a fixed format with severity, location, evidence and fix, and ends with a one-line verdict. Run after the fsdevops-qa gate is green, preferably through the fsdevops-code-review agent. Use when the user asks directly to review any Flutter code.
+description: Use when the user asks directly to review any Flutter code. Independent review stage of Full-Stack DevOps. Reviews finished app code read-only through one lens per pass - security, quality, lean (over-engineering, judged by the lean ladder), debt (shortcut notes), accessibility or performance - reporting only findings with confidence 80 or higher in a fixed format with severity, location, evidence and fix, and ends with a one-line verdict. Run after the fsdevops-qa gate is green, preferably through the fsdevops-code-review agent.
 ---
 
 # FSDevOps Reviewer

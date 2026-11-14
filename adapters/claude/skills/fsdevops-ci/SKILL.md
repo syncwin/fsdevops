@@ -1,6 +1,6 @@
 ---
 name: fsdevops-ci
-description: DevOps role skill of Full-Stack DevOps. Sets up and checks the toolchain (Flutter SDK, Visual Studio C++ workload for Windows desktop, Android SDK and a physical device, Dart MCP server), flavors and per-environment config, and GitHub Actions CI that runs the same gate as fsdevops-qa. Use when the user asks about setup, "flutter doctor" problems, flavors or CI.
+description: Use when the user asks about setup, "flutter doctor" problems, flavors or CI. DevOps role skill of Full-Stack DevOps. Sets up and checks the toolchain (Flutter SDK, Visual Studio C++ workload for Windows desktop, Android SDK and a physical device, Dart MCP server), flavors and per-environment config, and GitHub Actions CI that runs the same gate as fsdevops-qa.
 ---
 
 # FSDevOps CI Engineer

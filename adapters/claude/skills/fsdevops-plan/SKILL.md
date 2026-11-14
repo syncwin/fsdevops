@@ -1,6 +1,6 @@
 ---
 name: fsdevops-plan
-description: Planning stage of Full-Stack DevOps. Detects the project (stack, workspace, packages, targets, state and routing libraries, builder-owned paths), runs one question round, researches official docs, and writes a PRD for new apps and features or a change brief for updates, ending in the single approval gate before any code is written. Invoked by fsdevops first. Use when the user asks directly for "plan this app", "write a PRD" or "what would this change touch".
+description: Use when the user asks directly for "plan this app", "write a PRD" or "what would this change touch". Planning stage of Full-Stack DevOps. Detects the project (stack, workspace, packages, targets, state and routing libraries, builder-owned paths), runs one question round, researches official docs, and writes a PRD for new apps and features or a change brief for updates, ending in the single approval gate before any code is written. Invoked by fsdevops first.
 ---
 
 # FSDevOps Architect

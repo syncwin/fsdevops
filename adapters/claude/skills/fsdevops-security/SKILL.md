@@ -1,6 +1,6 @@
 ---
 name: fsdevops-security
-description: Security role skill of Full-Stack DevOps, always applied to builds and loaded by review. Covers secrets (never in the app bundle or repo), secure token storage, personal-data privacy and local encryption, input validation, platform permissions, network security, deep-link safety, logging hygiene, and dependency health and licence checks. Use when the user asks any security, privacy or dependency-licence question about an app.
+description: Use when the user asks any security, privacy or dependency-licence question about an app. Security role skill of Full-Stack DevOps, always applied to builds and loaded by review. Covers secrets (never in the app bundle or repo), secure token storage, personal-data privacy and local encryption, input validation, platform permissions, network security, deep-link safety, logging hygiene, and dependency health and licence checks.
 ---
 
 # FSDevOps Security Engineer

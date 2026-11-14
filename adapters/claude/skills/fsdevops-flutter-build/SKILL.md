@@ -1,6 +1,6 @@
 ---
 name: fsdevops-flutter-build
-description: Flutter build skill of Full-Stack DevOps. Creates new Flutter apps and adds new modules or features to existing ones - pub-workspace monorepo, module registry with runtime on/off, Riverpod 3 state, go_router routing, Material 3 theme tokens, adaptive layouts - verified on Windows desktop first, then Android, iOS and web. Invoked by fsdevops after an approved PRD. Use when the user asks directly for Flutter structure, state, routing, theming or platform questions.
+description: Use when the user asks directly for Flutter structure, state, routing, theming or platform questions. Flutter build skill of Full-Stack DevOps. Creates new Flutter apps and adds new modules or features to existing ones - pub-workspace monorepo, module registry with runtime on/off, Riverpod 3 state, go_router routing, Material 3 theme tokens, adaptive layouts - verified on Windows desktop first, then Android, iOS and web. Invoked by fsdevops after an approved PRD.
 ---
 
 # FSDevOps Flutter Developer

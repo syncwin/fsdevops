@@ -1,6 +1,6 @@
 ---
 name: fsdevops-performance
-description: Performance role skill of Full-Stack DevOps for Flutter. Sets and checks budgets for frame time, startup, memory, list scrolling, image use, app size and web first load, and profiles with DevTools in profile mode. Loaded when a plan lists performance or a reviewer flags it. Use when the user asks directly for jank, slow startup, large builds or memory questions.
+description: Use when the user asks directly for jank, slow startup, large builds or memory questions. Performance role skill of Full-Stack DevOps for Flutter. Sets and checks budgets for frame time, startup, memory, list scrolling, image use, app size and web first load, and profiles with DevTools in profile mode. Loaded when a plan lists performance or a reviewer flags it.
 ---
 
 # FSDevOps Performance Engineer
