@@ -21,7 +21,10 @@ Compare the diff with the approved brief. Files, packages, permissions or depend
 ## 3. Scenarios
 Turn each "Done when" and parity item into a check: an automated test where possible, otherwise numbered manual steps on the current target with expected results. Desktop: keyboard-only pass, window resize to the minimum width, 200% text scale.
 
+## 3b. Screenshot check (UI changes)
+Shoot the changed screens at phone and desktop size and look at them (`fsdevops-design/references/visual-qa.md`, "Shoot, fix, re-shoot"). Overflow, clipping or a broken layout is FAIL with the image path; no images is NOT RUN. QA reports; the fix and re-shoot run in the router's fix loop.
+
 ## 4. Pre-release
-Before `fsdevops-release`: gate green on the release target, version bumped, `[Unreleased]` moved into the version in `CHANGELOG.md`, docs gate green, no debug flags, no `print`, secret scan and dependency audit run (NOT RUN if the tool is missing).
+Before `fsdevops-release`: gate green on the release target, version bumped, `[Unreleased]` moved into the version in `CHANGELOG.md`, docs gate green, release-only platform settings checked (`fsdevops-flutter-build/references/platforms.md`: permissions in the main Android manifest, iOS usage strings, macOS entitlements, MSIX capabilities, web CORS and base href; FAIL when a used permission is missing), no debug flags, no `print`, secret scan and dependency audit run (NOT RUN if the tool is missing).
 
 Finish with a scratchpad: the gate table, scope findings, scenario results.

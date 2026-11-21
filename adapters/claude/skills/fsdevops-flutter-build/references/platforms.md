@@ -11,7 +11,17 @@ Windows desktop → Android → iOS → web (unless the PRD says otherwise). Sca
 - System tray, auto-start and file associations: only when the PRD asks; each needs a package or native code and the user's OK.
 - Packaging and release: `fsdevops-release`.
 
-## Android
+## Release-only differences (check before every release build)
+Debug builds hide some platform settings; a feature that works in `flutter run` can fail in a release build. Source: docs.flutter.dev deployment and platform setup pages.
+| Target | Check | Where |
+|---|---|---|
+| Android | `android.permission.INTERNET` (and every other permission the app uses) is in the main manifest; `flutter create` puts INTERNET only in the debug and profile manifests | `android/app/src/main/AndroidManifest.xml` |
+| Android | release signing config set from env or CI secrets, not the debug key; minify or shrink rules keep reflected classes | `android/app/build.gradle(.kts)` |
+| iOS | a usage description string for every protected API used (camera, photos, location, microphone and others) | `ios/Runner/Info.plist` |
+| macOS | network client (and any other) entitlement in both Debug and Release entitlement files; the sandbox blocks network calls otherwise | `macos/Runner/*.entitlements` |
+| Windows | when packaging as MSIX, declare the capabilities the app uses (for example internetClient) | packaging config |
+| Web | API hosts allow the app origin (CORS); `--base-href` matches the hosting path | server config, build command |
+
 - Prefer a physical phone over USB or wireless debugging on low-end PCs; the emulator needs a capable GPU.
 - Flavors for store builds versus FOSS builds when the PRD needs both (`fsdevops-ci`).
 
