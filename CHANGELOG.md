@@ -12,6 +12,7 @@
 - `fsdevops-design/references/visual-qa.md`: shoot, fix, re-shoot loop at phone (390x844) and desktop (1440x900) size.
 - `fsdevops/references/accessibility.md`: visible focus, toggle and heading roles through `Semantics`, labelled fields, target spacing, guideline tests.
 - Patterns adapted in our own words from six public UI skills; credited in `CREDITS.md`.
+- Release-only platform settings: `fsdevops-flutter-build/references/platforms.md` lists what debug builds hide (Android main-manifest permissions such as INTERNET, iOS usage strings, macOS entitlements, MSIX capabilities, web CORS and base href); `fsdevops-qa` pre-release and `fsdevops-release` check them and smoke-test the release artifact.
 
 ## [0.6.2] - 2026-11-14
 
