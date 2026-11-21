@@ -21,7 +21,8 @@ One pass per lens, rubric in `references/ux-rubric.md`:
 |---|---|
 | flow | one primary action, clear next step, shortest path, recognition over recall |
 | heuristics | Nielsen's ten (status, user control, consistency, error prevention, error recovery and the rest) |
-| hierarchy | type scale, spacing rhythm, alignment, colour roles, density, generic-template look |
+| hierarchy | type scale, spacing rhythm, alignment, colour roles, density, generic-template look, `DESIGN.md` direction and "Avoid" list |
+| baseline | tabular figures, real confirm or undo for destructive actions, heading spacing, motion tokens and reduced motion (`fsdevops-design/references/baseline-ui.md`) |
 | consistency | same job, same component, label and position; reuse of `packages/ui` |
 | states | loading, empty (three kinds), error with Retry, offline, saved, disabled, long text, RTL |
 | a11y | contrast, targets, focus order, semantics, 200% text, no colour-only signal (rules: `fsdevops/references/accessibility.md`) |
@@ -45,7 +46,7 @@ Fix: <smallest change> (owner: fsdevops-design|fsdevops-flutter-build|...)
 - Up to 3 "Keep" lines: what works and must not regress.
 
 ## Step 4: Verdict
-One line per lens (pass, pass with notes, fail), then one overall line: `Ready`, `Ready after fixes: N Critical, M Important` or `Not ready: <reason>`; add `code-only` when there were no screenshots. No numeric score.
+A score table, screens by lens, 0 to 4 derived from the findings (`references/ux-rubric.md`, "Screen score"). One line per lens (pass, pass with notes, fail), then up to two recommended focused passes per screen (`references/focused-passes.md`; `fsdevops-design` runs them), then one overall line: `Ready`, `Ready after fixes: N Critical, M Important` or `Not ready: <reason>`; add `code-only` when there were no screenshots. The score summarises; findings decide.
 
 Critique of the owner's own design idea: strongest objection first, then what would answer it.
 

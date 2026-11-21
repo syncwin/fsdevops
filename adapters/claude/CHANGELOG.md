@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.7.0] - 2026-11-21
+
+### Added
+- `fsdevops-design`: `references/design-direction.md` (design plan before code, defaults rejected), `references/anti-patterns.md` (avoid lists by product type), `references/baseline-ui.md` (tabular figures, real confirm or undo, letter spacing, motion around 200 ms). A `DESIGN.md` master file at the app root, described in `references/design-system.md`.
+- `fsdevops-critic`: `references/focused-passes.md` (bolder, quieter, typeset, layout, polish, run by `fsdevops-design`) and a `baseline` lens.
+- `fsdevops-qa`: step 3b, screenshot check at phone and desktop size.
+
+### Changed
+- `fsdevops-critic` verdict adds a 0 to 4 score per screen and lens, derived from the findings (the findings still decide).
+- `fsdevops-design/references/visual-qa.md`: shoot, fix, re-shoot loop at phone (390x844) and desktop (1440x900) size.
+- `fsdevops/references/accessibility.md`: visible focus, toggle and heading roles through `Semantics`, labelled fields, target spacing, guideline tests.
+- Patterns adapted in our own words from six public UI skills; credited in `CREDITS.md`.
+
 ## [0.6.2] - 2026-11-14
 
 ### Changed

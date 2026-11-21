@@ -18,3 +18,6 @@ Format: date · idea · source
 ## Done
 - 2026-11-05 · Security first (enterprise level): secure-by-default baseline, threat model in each brief, secret scanning, supply-chain pinning/audit, signed releases, security findings block release · done in 0.3.2 (PR sec/baseline) · User
 - 2026-11-05 · Documentation standard enforced (README + docs/, Keep a Changelog 0.0.1 start, docs/features/ index and template, docs_gate.py in the QA gate); 0.0.1 start and beta-until-1.0 rule · done in 0.3.3 (PR feat/docs-standard) · User
+
+- 2026-11-21: port the 0.7.0 design upgrade (direction, DESIGN.md, baseline, focused passes) to fswpdevops-design and fswpdevops-critic. Source: fsdevops 0.7.0 work.
+- 2026-11-21: a golden-test recipe for the phone and desktop screenshot sizes in visual-qa.md. Source: fsdevops 0.7.0 work.

@@ -1,5 +1,8 @@
 # Design system rules (designer)
 
+## Master file: `DESIGN.md` at the app repo root
+One source for design decisions that every screen and the critic read. Create it on the first UI task (after `design-direction.md`); update it, never fork it. Sections: Direction (purpose, tone, signature), Colours (roles and reasons, both schemes), Type (families and roles, scale), Spacing, radii, elevation and motion tokens (name and value, pointing to the theme file), Components (what `packages/ui` offers), Avoid (lines from `anti-patterns.md` plus project ones), Decisions (dated). The theme code stays the source of values; `DESIGN.md` says why. No secrets or private data in it.
+
 Flutter theming mechanics live in `fsdevops-flutter-build/references/theming.md`; accessibility in `fsdevops/references/accessibility.md`. This file adds the designer's decisions only.
 
 ## Reuse before building

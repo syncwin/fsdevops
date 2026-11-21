@@ -1,5 +1,11 @@
 # Visual QA (designer evidence)
 
+## Shoot, fix, re-shoot
+1. Shoot each key screen at phone size (390x844 logical) and desktop size (1440x900), plus the size-class checks below. Sources: golden or widget tests setting `tester.view.physicalSize` and `devicePixelRatio`, `integration_test` `takeScreenshot`, the Dart MCP widget inspector, a resized Windows window, or Playwright only for the Flutter web target.
+2. Look at every image (do not only save it): overflow stripes, clipped text, cramped targets, broken alignment, wrong navigation for the size.
+3. Fix the smallest cause, then re-shoot the same screen and size; keep before and after paths. Stop after two rounds on one screen and report what is left.
+4. Record path, size, scheme and text scale per image. No image = NOT RUN with the command that would make it.
+
 Measure, then look. One pass at the end of the build, not per widget.
 
 | Check | How | Pass when |

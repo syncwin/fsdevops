@@ -23,5 +23,11 @@ Hick (fewer choices), Fitts (bigger, closer targets), Jakob (familiar patterns),
 ## Severity map (NN/g 0-4 to house labels)
 4 catastrophic = Critical; 3 major = Important; 2 minor and 1 cosmetic = Minor; 0 = not a problem. Weigh frequency, impact and persistence.
 
+## Screen score (summary only)
+Per screen, score each lens 0 to 4: 4 no issues, 3 Minor only, 2 one Important, 1 several Important, 0 any Critical. The score is derived from the findings, never set by feel, and never replaces them. A lens with no evidence is `-` (NOT RUN), not 4.
+
+## Project checks
+When the project has `DESIGN.md`, also judge against its direction (colours, type roles, signature) and its "Avoid" list (`fsdevops-design/references/anti-patterns.md`), plus the baseline rules (`fsdevops-design/references/baseline-ui.md`).
+
 ## Result vocabulary
 PASS, FAIL, NOT RUN, NEEDS MANUAL EVIDENCE. Nothing is PASS without evidence.

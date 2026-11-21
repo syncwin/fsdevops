@@ -23,7 +23,9 @@ Work like the designer on the team: the brief decides, taste does not.
 1. Read the UI block of the brief (audience, devices and input, decisions per screen, data read, the one write, states list, theme source, a11y target). A line that cannot be filled: ask, do not guess.
 2. Reuse ladder: check `packages/ui` and its Widgetbook catalog; reuse as is, then adapt (a parameter, a token), then build new. A new widget names the gap it fills.
 3. One primary action per screen; the next step is obvious; recognition over recall.
-4. Tokens before widgets, states before polish, a11y while building, visual evidence at the end (`references/design-system.md`, `references/visual-qa.md`).
+4. Order: design system, then direction, then build, then critique and polish, then audit, then screenshots. Read or create `DESIGN.md` at the app root (`references/design-system.md`); with no direction yet, write the plan in `references/design-direction.md` (4 to 6 colour roles, typefaces with roles, a layout idea, defaults rejected) and copy the product's lines from `references/anti-patterns.md` into its "Avoid" section.
+5. Tokens before widgets, states before polish, a11y while building, baseline rules always (`references/baseline-ui.md`), visual evidence at the end (`references/visual-qa.md`).
+6. Focused passes (bolder, quieter, typeset, layout, polish) run here when the critic recommends them: `fsdevops-critic/references/focused-passes.md`.
 
 ## States (design all, not just the happy path)
 Loading, empty (first run, filtered to nothing, load error), error with Retry, offline, saved or done, disabled, long text, short text, RTL. Read-only views say so in words. Table and copy rules: `references/design-system.md`.
@@ -35,7 +37,7 @@ Rules live in `fsdevops/references/accessibility.md`; do not restate them. Desig
 Every new reusable widget gets use-cases for its states and size classes in the catalog. Details: `references/design-system.md`.
 
 ## Visual QA
-Render key screens at compact, medium and expanded widths, light and dark, 200% text scale; look at the screenshots, then record the paths. A check that cannot run is NOT RUN, never PASS. Details: `references/visual-qa.md`. The independent judgement pass is `fsdevops-critic`.
+Shoot key screens at phone and desktop size and at compact, medium and expanded widths, light and dark, 200% text scale; look at each image, fix, re-shoot, then record the paths. A check that cannot run is NOT RUN, never PASS. Details: `references/visual-qa.md`. The independent judgement pass is `fsdevops-critic`.
 
 ## Feed and lists (`references/feed-ui.md`)
 Mixed card types, actions, refresh, pagination.
