@@ -14,6 +14,7 @@ Full-Stack DevOps Claude plugin: app lifecycle (plan, build, update, verify, rev
 - Evals (real model calls): the cases live in `dev/evals/` (kept out of the shipped plugin because they hold `scaffold.sh` scripts); copy `adapters/claude` to a scratch folder, copy `dev/evals/*` into its `evals/`, then run `claude plugin eval <scratch copy> --trust-plugin --ablation none --scaffold --allow-tools Read Glob Grep Skill -j 4 --no-publish`. Rebuild cases with `python <owner-tools>/plugin-evals/regen_evals.py <plugin> <router> <fixture ids>`. Write results outside the repo (`<owner-outputs>/<plugin>/eval-results`, a local folder outside the repo); the packager includes repo files.
 
 ## Workflow
+0. Every maintenance session loads `/aiplus:aiplus` (efficiency, model routing, Run by lines, ledger) and `/aiaddon:aiaddon` (plugin build, maintain, review, version), and reads `IMPROVEMENTS.md` for open items in scope before changing anything.
 1. Read the skill or script you change, plus its neighbours.
 2. Make the smallest change; run the closest check, then the full gate.
 3. Update `CHANGELOG.md` for behavior changes; log ideas in `IMPROVEMENTS.md`.
