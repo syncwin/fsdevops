@@ -24,4 +24,6 @@ Turn each "Done when" and parity item into a check: an automated test where poss
 ## 4. Pre-release
 Before `fsdevops-release`: gate green on the release target, version bumped, `[Unreleased]` moved into the version in `CHANGELOG.md`, docs gate green, no debug flags, no `print`, secret scan and dependency audit run (NOT RUN if the tool is missing).
 
+Agent-built change: the tests named in the issue must exist and pass before the merge gate (`${CLAUDE_PLUGIN_ROOT}/skills/fsdevops/references/factory-workflow.md`).
+
 Finish with a scratchpad: the gate table, scope findings, scenario results.

@@ -29,4 +29,6 @@ Apply the router's Official first rule and cite the source for each choice. Link
 ## 5. Approval gate
 Show the brief, ask for one yes. The yes covers building and checking in the working folder only; publishing, pushing or signing with real keys needs its own yes.
 
+Agent-built change: write the issue with acceptance criteria and name the tests first (`${CLAUDE_PLUGIN_ROOT}/skills/fsdevops/references/factory-workflow.md`).
+
 Finish with a scratchpad: detected facts, answers, decisions, open items.

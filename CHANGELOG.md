@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.6.3] - 2026-11-22
+
+### Added
+- `skills/fsdevops/references/factory-workflow.md`: agent-built change workflow (issue with acceptance criteria, tests first, own worktree and PR, bounded CI fix loop, merge gate, human review by someone other than the requester, optional holdout scenarios). One pointer line each in `fsdevops-plan`, `fsdevops-qa` and `fsdevops-review`.
+
 ## [0.6.2] - 2026-11-14
 
 ### Changed

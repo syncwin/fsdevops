@@ -29,4 +29,6 @@ Only confidence >= 80. Security lens adds an "Unverified suspicions" list below 
 ## Verdict
 One line: `PASS` (no Critical or Important), or `FAIL: N Critical, M Important`. A security-lens FAIL blocks release (`fsdevops-release`).
 
+Agent-built change: apply the merge gate and a different human approver (`${CLAUDE_PLUGIN_ROOT}/skills/fsdevops/references/factory-workflow.md`).
+
 Finish with a scratchpad: lens, scope, verdict.

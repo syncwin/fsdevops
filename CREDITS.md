@@ -10,5 +10,6 @@ Full-Stack DevOps is one MIT-licensed package. Every skill, script and reference
 | [dietrichgebert/ponytail](https://github.com/dietrichgebert/ponytail) | The minimal-code order of operations (the lean ladder in `skills/fsdevops/references/lean-coding.md`, rewritten in our own words) and reviewing for over-engineering | MIT |
 | [Anthropic claude-plugins-official](https://github.com/anthropics/claude-plugins-official) (pr-review-toolkit) | The idea of confidence-scored review that reports only high-certainty findings | Apache-2.0 |
 | Full-Stack WP DevOps (same author) | The lifecycle: router, architect, build, QA gate, independent reviewer, release | MIT |
+| SDLC agent-factory pattern, public talks on agent-written PRs | The factory workflow (`skills/fsdevops/references/factory-workflow.md`), rewritten in our own words | n/a |
 
 Flutter and the related logo are trademarks of Google LLC. Claude and Anthropic are trademarks of Anthropic, PBC. This project is independent and not affiliated with or endorsed by either. See `docs/trademarks.md`.
